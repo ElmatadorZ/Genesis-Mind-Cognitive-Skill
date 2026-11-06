@@ -7,7 +7,12 @@ if __name__ == "__main__":
     system = GenesisOrchestrator()
 
     while True:
-        user_input = input("\n>> ")
+        try:
+            user_input = input("\n>> ")
+        except (EOFError, KeyboardInterrupt):
+            break
+        if user_input.strip().lower() in {"exit", "quit"}:
+            break
         result = system.run(user_input)
 
         print("\n=== FINAL DECISION ===")

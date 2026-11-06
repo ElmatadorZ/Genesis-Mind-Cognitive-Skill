@@ -1,0 +1,538 @@
+{
+ "P1": {
+  "X": {
+   "C1": [
+    2,
+    "Three assumptions named and challenged (must quit first; 6 months is enough; roasting skill = brand)."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Inferred / Unknown block."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C (quit now, parallel with criteria, reduced hours) compared on gains, costs and failure points."
+   ],
+   "C4": [
+    2,
+    "Skeptic says some businesses never grow part-time and that waiting is a risk too."
+   ],
+   "C5": [
+    2,
+    "States CONFIDENCE ~65% and that it would rise with sales data."
+   ],
+   "C6": [
+    2,
+    "Lists when the advice fails (sales near target, large B2B deal, partner income, job harming health)."
+   ],
+   "C7": [
+    2,
+    "Measurable exit criteria (2 of 3), 9-12 months reserve, 6-12 month deadline."
+   ],
+   "C8": [
+    2,
+    "Conditional recommendation, ends with 'the decision is yours'."
+   ],
+   "C9": [
+    1,
+    "Thorough but long for a personal question; system map and scenario block add bulk, and the scenario percentages are guesses."
+   ],
+   "C10": [
+    2,
+    "Uses the 6 months directly: it is survival money, not capital, and leaves only 3-4 real months."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Three assumptions challenged, including the binary quit/stay framing."
+   ],
+   "C2": [
+    2,
+    "Explicit known / not-known list, flagging which unknowns decide the answer."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C with gains and risks, C recommended."
+   ],
+   "C4": [
+    2,
+    "Names the strongest objection to B (lost momentum) and a shadow check where A beats C."
+   ],
+   "C5": [
+    1,
+    "Says confidence cannot be assessed without sales data; honest, but gives no level."
+   ],
+   "C6": [
+    2,
+    "'What changes the answer' plus a shadow check give clear conditions for reversing."
+   ],
+   "C7": [
+    2,
+    "Concrete exit criteria (50-70% of costs for 3 months, repeat buyers, 9-12 months reserve) and asks for specific numbers."
+   ],
+   "C8": [
+    2,
+    "Explicitly withholds an unconditional should/shouldn't."
+   ],
+   "C9": [
+    2,
+    "Tight and proportionate."
+   ],
+   "C10": [
+    2,
+    "Asks whether the 6 months covers business costs and says to measure months to profitability, not months of savings."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Challenges '6 months is enough' implicitly (the money carries two loads) but does not name assumptions as such."
+   ],
+   "C2": [
+    1,
+    "Unknowns appear only as questions at the end; no explicit separation from known facts."
+   ],
+   "C3": [
+    1,
+    "One staged path; quitting now is not set out and compared as an option."
+   ],
+   "C4": [
+    0,
+    "No case against its own 'don't quit yet' lean."
+   ],
+   "C5": [
+    0,
+    "No statement of confidence."
+   ],
+   "C6": [
+    1,
+    "Has a post-quit 'life check' date and a conditional opening, but no conditions under which the advice itself is wrong."
+   ],
+   "C7": [
+    2,
+    "Very concrete: toll roasting, sell to non-friends, 2-3 wholesale cafes, track cost per kg with 15-20% roast loss."
+   ],
+   "C8": [
+    1,
+    "Opens with a fairly directive verdict ('not yet'), though conditional on the 6 months being the only money."
+   ],
+   "C9": [
+    2,
+    "Tight and practical."
+   ],
+   "C10": [
+    2,
+    "Shows the 6 months shrinking to 3-4 once business costs come out of it."
+   ]
+  },
+  "rank": [
+   "Y",
+   "X",
+   "Z"
+  ],
+  "why": "Y covers assumptions, options, counter-case and reversal conditions as fully as X but more tightly and without X's unsupported scenario percentages (15-20%/35-40%/40%); X is close behind and is the only one to state a confidence level. Z is practical and accurate (roast weight loss of 15-20% is in the normal range) but gives one path with no counter-argument or uncertainty, and its '12-24 months to break even' claim, which X also makes, is unsourced."
+ },
+ "P2": {
+  "X": {
+   "C1": [
+    2,
+    "Challenges 'growth needs a new market', 'the playbook transfers' and the binary framing."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Inferred / Unknown with the decisive unknowns."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C with trade-offs and failure conditions."
+   ],
+   "C4": [
+    2,
+    "Skeptic argues both ways, including that doubling down on a capped Thailand is a slow death."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE about 60%, with the reason."
+   ],
+   "C6": [
+    2,
+    "'This recommendation is wrong if' lists four concrete conditions."
+   ],
+   "C7": [
+    2,
+    "Cap the probe at 10% of burn with no entity and a non-CEO owner, set proof criteria by date, offers a runway model."
+   ],
+   "C8": [
+    2,
+    "Gives a default but conditions it and lists what would change it."
+   ],
+   "C9": [
+    1,
+    "Very long (about 1,300 words), with some repetition across sections."
+   ],
+   "C10": [
+    2,
+    "Turns 14 months into about 8 operating months against a 4-6 month raise and 6-12 months to see signal in Vietnam."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Reframes the question and separates saturation from execution problems."
+   ],
+   "C2": [
+    1,
+    "Names the one hard fact and lists the facts that would settle it, but has no explicit known/unknown split."
+   ],
+   "C3": [
+    1,
+    "Mentions a cheap pilot as an alternative but does not compare paths."
+   ],
+   "C4": [
+    1,
+    "Notes investors may want multi-country proof, but has no developed case against its lean."
+   ],
+   "C5": [
+    1,
+    "Says it cannot give an assessment yet; no stated level."
+   ],
+   "C6": [
+    1,
+    "Conditions are implicit in the five facts (e.g. saturation makes the case for Vietnam)."
+   ],
+   "C7": [
+    1,
+    "Gives diagnostic questions and asks for numbers; no concrete test or threshold."
+   ],
+   "C8": [
+    2,
+    "Explicitly declines to decide."
+   ],
+   "C9": [
+    2,
+    "Tight."
+   ],
+   "C10": [
+    2,
+    "Turns the runway into 8-9 months to show results against a 4-6 month raise."
+   ]
+  },
+  "Z": {
+   "C1": [
+    2,
+    "Challenges whether Thailand is really won and the hidden costs of Vietnam (founder attention)."
+   ],
+   "C2": [
+    1,
+    "Gives questions about Thailand's strength but does not explicitly mark what is known and what is unknown."
+   ],
+   "C3": [
+    2,
+    "Thailand, Vietnam and a middle path, each with conditions."
+   ],
+   "C4": [
+    2,
+    "Section 5 makes the case for expanding now (paid entry, first-mover window, investor demand, saturation)."
+   ],
+   "C5": [
+    0,
+    "No confidence or uncertainty statement; says doubling down 'almost always wins'."
+   ],
+   "C6": [
+    2,
+    "Section 5 conditions plus go/no-go criteria."
+   ],
+   "C7": [
+    2,
+    "5-10% test budget, specific cheap tests, a go/no-go template, team questions."
+   ],
+   "C8": [
+    2,
+    "Default stated conditionally, with questions for the team."
+   ],
+   "C9": [
+    1,
+    "Well organized but long (about 870 words)."
+   ],
+   "C10": [
+    2,
+    "Makes the 14 months the opening analysis (8 months, 6-12 months to signal)."
+   ]
+  },
+  "rank": [
+   "X",
+   "Z",
+   "Y"
+  ],
+  "why": "X is the most complete: it has explicit unknowns, confidence and invalidation conditions and a concrete capped probe, though its option 'odds' (45/15/40%) are invented precision and it is bloated. Z gives nearly the same substance with accurate context (Vietnam ~100M people is correct) but states no uncertainty; Y is sharp but stops at diagnostics, with no options or next steps compared."
+ },
+ "P3": {
+  "X": {
+   "C1": [
+    1,
+    "Implicit only (e.g. growth with a shrinking margin is a trap); no assumptions named."
+   ],
+   "C2": [
+    1,
+    "States clearly that nothing was shared, then lists what to check; no explicit known/unknown split."
+   ],
+   "C3": [
+    1,
+    "Mentions grandfathering vs migrating and testing on new customers; no options compared."
+   ],
+   "C4": [
+    0,
+    "No counter-argument."
+   ],
+   "C5": [
+    1,
+    "Says it cannot judge yet; no level."
+   ],
+   "C6": [
+    1,
+    "The break-even question (how many customers you can lose) is a fragility test, but there are no explicit invalidation conditions."
+   ],
+   "C7": [
+    2,
+    "Clear list of data to send plus 8 concrete checks."
+   ],
+   "C8": [
+    1,
+    "Promises to 'tell you whether to launch it, change it, or drop it' later; structures thinking but leans toward a verdict."
+   ],
+   "C9": [
+    2,
+    "Proportionate checklist."
+   ],
+   "C10": [
+    2,
+    "Invents nothing about the plan, though it assumes a physical product with 'shipping' in its cost examples."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Three assumptions challenged (new means better, customers see it as intended, success is measurable)."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Inferred / Unknown."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C for rollout, plus generic scenarios."
+   ],
+   "C4": [
+    1,
+    "The skeptic gives common failure modes, but there is no strong case against its own staged-rollout lean."
+   ],
+   "C5": [
+    2,
+    "Explicit: not assessable on the plan; about 70% on the default."
+   ],
+   "C6": [
+    2,
+    "'Likely good if all hold' / 'likely bad if' conditions."
+   ],
+   "C7": [
+    2,
+    "Asks for specific inputs and proposes a staged test with metrics set in advance."
+   ],
+   "C8": [
+    2,
+    "'The decision is yours.'"
+   ],
+   "C9": [
+    0,
+    "About 940 words of generic scenarios and system maps for a question with no information; padded."
+   ],
+   "C10": [
+    2,
+    "Says outright that it will not make up a verdict and labels its scenarios as generic, not about this plan."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Implicit (a plan is only good against a goal); assumptions not named."
+   ],
+   "C2": [
+    1,
+    "Clearly says it has no data and lists the deciding facts; no explicit split."
+   ],
+   "C3": [
+    1,
+    "Mentions testing on a small group or grandfathering; nothing compared."
+   ],
+   "C4": [
+    0,
+    "None."
+   ],
+   "C5": [
+    1,
+    "Says 'not assessable yet'; no level."
+   ],
+   "C6": [
+    1,
+    "One condition: a gain elsewhere seldom outweighs pushing loyal buyers into a worse deal."
+   ],
+   "C7": [
+    2,
+    "Five deciding facts, two sharp first questions, a small-group test."
+   ],
+   "C8": [
+    2,
+    "Gives no verdict and structures the thinking."
+   ],
+   "C9": [
+    2,
+    "Tight and proportionate."
+   ],
+   "C10": [
+    2,
+    "Invents nothing and states what it needs."
+   ]
+  },
+  "rank": [
+   "Z",
+   "Y",
+   "X"
+  ],
+  "why": "Z handles the missing information most honestly and efficiently, with a few deciding facts and two sharp questions, and invents nothing. Y scores highest on the rubric but is mostly generic padding for an empty prompt; X is a solid checklist, but its 'shipping' cost example assumes a physical product the user never mentioned."
+ },
+ "P4": {
+  "X": {
+   "C1": [
+    1,
+    "Implicitly challenges the 'now' premise (timing matters less for long-term holders)."
+   ],
+   "C2": [
+    1,
+    "Says it has no real-time price; does not systematically separate known from unknown."
+   ],
+   "C3": [
+    2,
+    "Buy-if vs wait-if paths, plus DCA vs partial lump sum (30-50%)."
+   ],
+   "C4": [
+    1,
+    "Notes gold has fallen hard and stagnated for years; no full counter-case."
+   ],
+   "C5": [
+    1,
+    "Says nobody knows whether now is best; no stated confidence."
+   ],
+   "C6": [
+    1,
+    "Wait if the money may be needed soon or if buying out of FOMO."
+   ],
+   "C7": [
+    2,
+    "Concrete: emergency fund first, 5-15% allocation, DCA, gold bar vs jewelry, check the spread."
+   ],
+   "C8": [
+    2,
+    "Conditional, with a 'not personal investment advice' note."
+   ],
+   "C9": [
+    2,
+    "Practical and proportionate."
+   ],
+   "C10": [
+    2,
+    "No buy/sell call and no live price; the Thai-market facts (spot price times THB, making charges on jewelry) are accurate."
+   ]
+  },
+  "Y": {
+   "C1": [
+    1,
+    "Reframes timing as secondary to purpose and position size."
+   ],
+   "C2": [
+    1,
+    "States it has no current price and lists the deciding unknowns."
+   ],
+   "C3": [
+    1,
+    "Weighs DCA against a lump sum; little else."
+   ],
+   "C4": [
+    1,
+    "Gives DCA's downside (higher average cost if prices keep rising)."
+   ],
+   "C5": [
+    1,
+    "Says confidence cannot be assessed; no level."
+   ],
+   "C6": [
+    1,
+    "Risk rises sharply if the money is needed within 1-2 years; the 20%-drop test."
+   ],
+   "C7": [
+    1,
+    "Two questions to answer and a DCA principle; less concrete than X."
+   ],
+   "C8": [
+    2,
+    "Explicitly leaves the decision to the user."
+   ],
+   "C9": [
+    2,
+    "Tight, though it opens with an irrelevant pointer to an internal tool name."
+   ],
+   "C10": [
+    2,
+    "No call and no price levels."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Offers a better question (can you hold through a 10-20% drop) in place of timing."
+   ],
+   "C2": [
+    1,
+    "Lists the real-time data it lacks."
+   ],
+   "C3": [
+    0,
+    "No options; it redirects the user elsewhere."
+   ],
+   "C4": [
+    0,
+    "None."
+   ],
+   "C5": [
+    1,
+    "Declines to assess as out of domain."
+   ],
+   "C6": [
+    0,
+    "No conditions."
+   ],
+   "C7": [
+    1,
+    "Next step is to open another tool and supply 5 items; the checklist is useful, but the action is a handoff."
+   ],
+   "C8": [
+    2,
+    "Gives no call; 'you decide'."
+   ],
+   "C9": [
+    1,
+    "Much of the text explains why it won't answer."
+   ],
+   "C10": [
+    2,
+    "No call and no live levels."
+   ]
+  },
+  "rank": [
+   "X",
+   "Y",
+   "Z"
+  ],
+  "why": "X gives the most useful conditional guidance with accurate Thai-market details (making charges on jewelry, spot price times THB, spread) and makes no call and states no price. Y is sound but thinner and opens with an irrelevant tool referral; Z mostly refuses and redirects, adding little the user can act on."
+ }
+}

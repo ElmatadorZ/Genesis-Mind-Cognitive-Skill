@@ -1,7 +1,9 @@
 from genesis_core import GenesisMind
 
-gm = GenesisMind()
 
-result = gm.run("Should I expand Alternative Slowbar globally now?")
+if __name__ == "__main__":
+    gm = GenesisMind()
 
-print(result)
+    result = gm.run("Should I expand Alternative Slowbar globally now?")
+
+    print(result)

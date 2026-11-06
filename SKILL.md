@@ -1,6 +1,6 @@
 ---
 name: "genesis-mind-strategic-intelligence"
-version: "5C.1"
+version: "5D.1"
 author: "ElmatadorZ"
 description: |
   Use this skill for strategic decisions, business analysis, thesis building,
@@ -158,8 +158,13 @@ The skill degrades honestly rather than fabricate:
   observation.
 - **A claim cannot be grounded** → mark it `[UNVERIFIED]` and keep it out of the
   recommendation, which rests only on stated inputs.
-- **Wrong domain (financial markets)** → hand off to `money-atlas-intelligence-os`
-  rather than stretching this skill past its edge.
+- **Wrong domain (financial markets)** → never answer with a handoff alone: the
+  market skill may not be installed, and a redirect is not an answer. The answer
+  must stand on its own: the user's goal and horizon, position sizing ("what share
+  of savings, could you hold through a 20% drop?"), staged vs one-off entry, the
+  costs and forms of holding the asset, and the questions that decide it. No prices,
+  levels or buy/sell calls. At most one closing line may add that
+  `money-atlas-intelligence-os`, if installed, can add live market analysis.
 - **Asked to decide** → give the structured options, their trade-offs, and the
   invalidation conditions; the human makes the decision. This skill structures
   thinking; it does not act.
@@ -167,9 +172,27 @@ The skill degrades honestly rather than fabricate:
 An abstention with its reason is a valid output. A confident conclusion built on
 facts the skill does not have is not.
 
+### Proportion — size the answer to the information given
+
+The full OUTPUT STRUCTURE below is for questions that carry enough facts to fill it.
+A question carries enough when it names the options **or** at least one hard
+constraint (a runway, savings, a deadline, a budget, a number). Then use the full
+structure, built on those facts. The short form below is only for a question that
+gives no specifics at all ("is our plan good?" with no plan):
+
+- Answer in **under ~250 words**: the 3–5 facts that would decide it, one or two
+  questions to ask first, and at most one general principle that holds either way.
+- **No scenarios, agent council or system map** built on invented specifics.
+  Generic scenarios are filler, not analysis.
+- **No confidence percentage** unless it is grounded in stated inputs; say
+  "not assessable yet" instead.
+
+Measured: on such a prompt the full structure ran ~1,000 words and scored 0/2 on
+concision in a blind evaluation; the short honest answer scored higher overall.
+
 ---
 
-## OUTPUT STRUCTURE — Default
+## OUTPUT STRUCTURE — Default (when the question carries enough facts)
 📍 SITUATION ANALYSIS
 [What is actually happening — stripped of assumptions]
 📍 FIRST PRINCIPLE BREAKDOWN

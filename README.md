@@ -1,7 +1,7 @@
 # Genesis Mind Strategic Intelligence
 ### Claude Skill — Multi-Agent Strategic Reasoning System
 
-**Version:** 5C.1 — Masterpiece  
+**Version:** 5D.1 — Masterpiece  
 **Author:** Bunyawat Dechanon (ElmatadorZ)  
 **Brand:** Money Atlas 
 **Type:** Claude Custom Skill (SKILL.md format)
@@ -202,6 +202,9 @@ genesis-mind-strategic-intelligence/
 ├── EVOLUTION.md                ← Skill iteration history
 │
 ├── core/                       ← Core reasoning engines
+│   ├── decision_engine.py      ← Option scoring: reward · risk · probability · reversibility
+│   ├── decision_memory.py      ← re-export of /decision_memory.py
+│   ├── risk_model.py           ← re-export of /risk_model.py
 │   ├── first_principle.py
 │   ├── system_thinking.py
 │   ├── shadow_engine.py
@@ -216,16 +219,115 @@ genesis-mind-strategic-intelligence/
 │   ├── executor.py
 │   └── shadow_agent.py
 │
+├── main.py                     ← one-shot demo:  python main.py
+├── run_genesis.py              ← interactive orchestrator:  python run_genesis.py
+├── run.py                      ← interactive genesis_full:  python run.py
 ├── genesis_core.py             ← Core orchestration
-├── genesis_orchestrator.py     ← Multi-agent coordination
-├── decision_engine.py          ← Decision framework
+├── genesis_core_vx.py          ← VX consciousness-layer variant
+├── genesis_orchestrator.py     ← Multi-agent coordination (core + multi-self + shadow)
+├── decision_engine.py          ← Council vote selection (most confident identity)
 ├── shadow_genesis.py           ← Shadow critique layer
 ├── first_principle_codex.py    ← First Principle engine (full)
 │
-├── tests/                      ← unit tests for the reasoning engines + skill contract
+├── tests/                      ← 39 tests: engines, runtime end-to-end, skill contract
+├── evals/2026-11-06/           ← prompts, rubric, every answer and every grade behind the results below
 ├── tools/validate_skill.py     ← installability + integrity checker (run in CI)
 └── .github/workflows/          ← CI: compile · skill integrity · tests · hygiene
 ```
+
+---
+
+## Test results — with the skill vs without it
+
+Measured on 2026-11-06. Everything behind these numbers is in [`evals/2026-11-06/`](evals/2026-11-06/):
+the prompts, the rubric, all 16 answers and all three grading rounds, so any figure here can be checked.
+
+### Answer quality (blind-graded)
+
+Four prompts, each answered by a fresh agent that had never seen this repository: once with no
+skill, and once each following `SKILL.md` 5C.1, 5D and 5D.1. One independent grader scored all 16
+answers on the same 10 criteria (0–2 each, 20 per answer) without knowing which answer came from
+which version, then ranked the four answers per prompt.
+
+| Prompt | No skill | 5C.1 | 5D | **5D.1** |
+|---|---|---|---|---|
+| P1 Quit a stable job (6 months of savings) to start a coffee brand? | 11 | 18 | 19 | **19** |
+| P2 Expand to Vietnam or stay in Thailand, 14 months of runway | 16 | 19 | 14 | **19** |
+| P3 "Is our new pricing plan a good idea?" (no plan given) | 12 | 17 | 14 | **14** |
+| P4 "Should I buy gold right now?" | 15 | 12 | 15 | **15** |
+| **Total (of 80)** | 54 | 66 | 62 | **67** |
+| **Ranked first by the grader** | 0 of 4 | 0 of 4 | 0 of 4 | **4 of 4** |
+| Mean rank (1 = best) | 3.00 | 3.25 | 2.75 | **1.00** |
+
+Where the skill moves the answer, per criterion (8 points max across the four prompts):
+
+| Criterion | No skill | 5C.1 | 5D.1 |
+|---|---|---|---|
+| States its confidence (C5) | 2 | 7 | 7 |
+| Makes the case against itself (C4) | 3 | 5 | 5 |
+| Compares more than one option (C3) | 5 | 7 | 7 |
+| Surfaces hidden assumptions (C1) | 4 | 7 | 6 |
+| Separates known from unknown (C2) | 4 | 7 | 6 |
+| Proportionate length (C9) | 7 | 4 | 6 |
+
+On P3 the grader ranked 5C.1 last despite its high rubric total: about 1,000 words of generic
+scenarios for a question that contained no plan. 5D.1 answers that prompt in 275 words with the
+facts that would decide it, which the grader preferred. On P4, 5C.1 mostly redirected the user to
+another skill; 5D.1 answers on its own and makes no buy/sell call or price claim.
+
+### How 5D.1 was reached
+
+| Round | Compared | Finding | Change |
+|---|---|---|---|
+| 1 | no skill vs 5C.1 | 64 vs 54, but too long on thin questions and an empty market handoff | 5D: proportion rule, handoff must stand alone |
+| 2 | no skill · 5C.1 · 5D | Length fixed, but the short form fired on P2, which had real facts (19 → 14) | 5D.1: short form only when the question names neither options nor a constraint |
+| 3 | all four, one grader | 5D.1 ranked first on every prompt | released |
+
+Rounds 1 and 2 used different graders, so their totals are not compared with round 3; the table above
+is round 3 only.
+
+### When the skill is picked (trigger test)
+
+Ten prompts, judged by an agent that saw only the skill descriptions: strategy questions, simple facts,
+code, and gold/coffee questions that belong to other skills. The 5C and 5C.1 descriptions both scored
+**10/10**. Removing "ALWAYS use / do not skip" changed nothing in this three-skill setup; it matters
+when the skill sits beside sibling skills that also claim every prompt.
+
+### Engineering, 5C → 5D.1
+
+| | 5C | 5D.1 |
+|---|---|---|
+| Tests | 21 | **39** |
+| Modules that import | 26 of 32 | **35 of 35** |
+| Entry points that run end to end (`main`, `run`, `run_genesis`, `agent`, `first_principle_codex`) | 2 of 5 | **5 of 5** |
+| Runtime packages in requirements.txt | 7 (none used) | **0** |
+| Import time, `agents.analyst_llm` (median of 7) | 93 ms | **0.4 ms** |
+| CI jobs passing (Python 3.9 / 3.11 / 3.12) | 8 of 8 | **8 of 8** |
+
+### Limits of this test
+
+Four prompts, one answer per version, one grader: the result shows a clear direction, not a
+statistically settled effect. "With the skill" means the agent read `SKILL.md` and followed it; the
+skill was not installed through a skills runtime. The trigger test used three skills, not the full
+Genesis ecosystem.
+
+---
+
+## Runtime status — what the Python layer really does
+
+The skill is `SKILL.md`; the Python is an optional execution layer. Its parts are not equally real,
+and this table says which is which so nothing here is mistaken for more than it is.
+
+| Part | Status |
+|---|---|
+| `first_principle_codex.py` | Real logic, tested (epistemic filter, frame heuristics, selection rule) |
+| `core/decision_engine.py` | Real logic, tested (≥2 options, risk tolerance, reversibility, bounded confidence) |
+| `risk_model.py`, `decision_memory.py`, `decision_engine.py` | Real, small, tested |
+| `genesis_core`, `genesis_core_vx`, `genesis_orchestrator`, `main`, `run`, `run_genesis`, `agent` | Run end to end, tested; they wire the parts together |
+| `agents/*`, `core/first_principle.py` … `core/cosmic_engine.py`, `genesis_full.py` | **Scaffolds**: return fixed text, not analysis |
+| `llm/llm_client.py` | **Stub**: returns a simulated response; plug a real client in here |
+
+Option values in the demos (`OptionGenerator`) are illustrative constants, not estimates.
 
 ---
 
@@ -250,7 +352,7 @@ Checked on every push, and runnable locally:
 pip install pytest pyyaml
 
 python tools/validate_skill.py   # frontmatter, license, and reasoning contract intact
-python -m pytest -q              # unit tests over the reasoning engines + skill contract
+python -m pytest -q              # 39 tests: engines, every entry point end to end, skill contract
 ```
 
 The tests pin the First Principle Codex's actual behaviour — the epistemic filter that drops
@@ -260,10 +362,11 @@ the decision and risk engines and the skill's own promises (uncertainty stated, 
 required, an invalidation condition named, and honest degradation when data is missing). They are
 non-vacuous: loosen a gate and the matching test turns red.
 
-> The test suite also caught a real defect on the way in: `first_principle_codex.py` carried two
+> The test suite caught real defects on the way in. In 5C, `first_principle_codex.py` carried two
 > module docstrings before `from __future__`, a `SyntaxError` that meant the file never imported.
-> With no CI, nothing had flagged it. It is fixed, and `compileall` now runs in CI so it cannot
-> recur silently.
+> In 5D, five entry points could not be imported at all: they expected a `core/decision_engine.py`
+> that was missing, and the parts they wired together had drifted apart. `compileall` cannot see
+> that, so the suite now imports every module and runs every entry point.
 
 ---
 
@@ -271,7 +374,8 @@ non-vacuous: loosen a gate and the matching test turns red.
 
 | Skill | Domain |
 |---|---|
-| `skynet-elite-commander` | Meta-cognition OS — routes all domains |
+| `genesis-protocol` | Router: picks one domain skill per task and the depth tier |
+| `skynet-elite-commander` | Meta-cognition OS |
 | `genesis-mind-strategic-intelligence` | Strategy, decisions, philosophy, business |
 | `money-atlas-intelligence-os` | Financial markets, macro, trading |
 | `alternative-coffee-intelligence` | Coffee science and roastery operations |
