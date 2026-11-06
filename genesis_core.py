@@ -15,14 +15,30 @@ from agents.shadow_agent import ShadowAgent
 # ===============================
 # CONTEXT
 # ===============================
+class MemoryStore:
+    """What the agents write to: ctx.memory.add(key, value, tags=..., strength=...)."""
+
+    def __init__(self):
+        self.items = []
+
+    def add(self, key, value, tags=None, strength=1.0):
+        self.items.append({"key": key, "value": value, "tags": list(tags or []), "strength": strength})
+
+    def by_tag(self, tag):
+        return [i for i in self.items if tag in i["tags"]]
+
+    def __len__(self):
+        return len(self.items)
+
+
 class Context:
     def __init__(self):
-        self.memory = []
+        self.memory = MemoryStore()
         self.decision_memory = DecisionMemory()
         self.risk_model = RiskModel()
 
     def add_memory(self, item):
-        self.memory.append(item)
+        self.memory.add("note", item)
 
 
 # ===============================
@@ -101,5 +117,14 @@ class GenesisMind:
             "confidence": round(decision.confidence, 2),
             "debate": conflict,
             "reasoning": decision.reasoning,
-            "risk": decision.risk
+            "risk": decision.risk,
+            "act": decision.act,
+            "scores": decision.scores,
         }
+
+    def process(self, context: str) -> Dict[str, Any]:
+        """Entry used by GenesisOrchestrator: run() plus a one-line shadow check."""
+        out = self.run(context)
+        shadow = out["debate"].get("shadow") or []
+        out["shadow_check"] = " / ".join(shadow) if shadow else "no shadow reflection"
+        return out

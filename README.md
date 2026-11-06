@@ -1,7 +1,7 @@
 # Genesis Mind Strategic Intelligence
 ### Claude Skill — Multi-Agent Strategic Reasoning System
 
-**Version:** 5C.1 — Masterpiece  
+**Version:** 5D — Masterpiece  
 **Author:** Bunyawat Dechanon (ElmatadorZ)  
 **Brand:** Money Atlas 
 **Type:** Claude Custom Skill (SKILL.md format)
@@ -202,6 +202,9 @@ genesis-mind-strategic-intelligence/
 ├── EVOLUTION.md                ← Skill iteration history
 │
 ├── core/                       ← Core reasoning engines
+│   ├── decision_engine.py      ← Option scoring: reward · risk · probability · reversibility
+│   ├── decision_memory.py      ← re-export of /decision_memory.py
+│   ├── risk_model.py           ← re-export of /risk_model.py
 │   ├── first_principle.py
 │   ├── system_thinking.py
 │   ├── shadow_engine.py
@@ -216,16 +219,38 @@ genesis-mind-strategic-intelligence/
 │   ├── executor.py
 │   └── shadow_agent.py
 │
+├── main.py                     ← one-shot demo:  python main.py
+├── run_genesis.py              ← interactive orchestrator:  python run_genesis.py
+├── run.py                      ← interactive genesis_full:  python run.py
 ├── genesis_core.py             ← Core orchestration
-├── genesis_orchestrator.py     ← Multi-agent coordination
-├── decision_engine.py          ← Decision framework
+├── genesis_core_vx.py          ← VX consciousness-layer variant
+├── genesis_orchestrator.py     ← Multi-agent coordination (core + multi-self + shadow)
+├── decision_engine.py          ← Council vote selection (most confident identity)
 ├── shadow_genesis.py           ← Shadow critique layer
 ├── first_principle_codex.py    ← First Principle engine (full)
 │
-├── tests/                      ← unit tests for the reasoning engines + skill contract
+├── tests/                      ← 39 tests: engines, runtime end-to-end, skill contract
 ├── tools/validate_skill.py     ← installability + integrity checker (run in CI)
 └── .github/workflows/          ← CI: compile · skill integrity · tests · hygiene
 ```
+
+---
+
+## Runtime status — what the Python layer really does
+
+The skill is `SKILL.md`; the Python is an optional execution layer. Its parts are not equally real,
+and this table says which is which so nothing here is mistaken for more than it is.
+
+| Part | Status |
+|---|---|
+| `first_principle_codex.py` | Real logic, tested (epistemic filter, frame heuristics, selection rule) |
+| `core/decision_engine.py` | Real logic, tested (≥2 options, risk tolerance, reversibility, bounded confidence) |
+| `risk_model.py`, `decision_memory.py`, `decision_engine.py` | Real, small, tested |
+| `genesis_core`, `genesis_core_vx`, `genesis_orchestrator`, `main`, `run`, `run_genesis`, `agent` | Run end to end, tested; they wire the parts together |
+| `agents/*`, `core/first_principle.py` … `core/cosmic_engine.py`, `genesis_full.py` | **Scaffolds**: return fixed text, not analysis |
+| `llm/llm_client.py` | **Stub**: returns a simulated response; plug a real client in here |
+
+Option values in the demos (`OptionGenerator`) are illustrative constants, not estimates.
 
 ---
 
@@ -250,7 +275,7 @@ Checked on every push, and runnable locally:
 pip install pytest pyyaml
 
 python tools/validate_skill.py   # frontmatter, license, and reasoning contract intact
-python -m pytest -q              # unit tests over the reasoning engines + skill contract
+python -m pytest -q              # 39 tests: engines, every entry point end to end, skill contract
 ```
 
 The tests pin the First Principle Codex's actual behaviour — the epistemic filter that drops
@@ -260,10 +285,11 @@ the decision and risk engines and the skill's own promises (uncertainty stated, 
 required, an invalidation condition named, and honest degradation when data is missing). They are
 non-vacuous: loosen a gate and the matching test turns red.
 
-> The test suite also caught a real defect on the way in: `first_principle_codex.py` carried two
+> The test suite caught real defects on the way in. In 5C, `first_principle_codex.py` carried two
 > module docstrings before `from __future__`, a `SyntaxError` that meant the file never imported.
-> With no CI, nothing had flagged it. It is fixed, and `compileall` now runs in CI so it cannot
-> recur silently.
+> In 5D, five entry points could not be imported at all: they expected a `core/decision_engine.py`
+> that was missing, and the parts they wired together had drifted apart. `compileall` cannot see
+> that, so the suite now imports every module and runs every entry point.
 
 ---
 
@@ -271,7 +297,8 @@ non-vacuous: loosen a gate and the matching test turns red.
 
 | Skill | Domain |
 |---|---|
-| `skynet-elite-commander` | Meta-cognition OS — routes all domains |
+| `genesis-protocol` | Router: picks one domain skill per task and the depth tier |
+| `skynet-elite-commander` | Meta-cognition OS |
 | `genesis-mind-strategic-intelligence` | Strategy, decisions, philosophy, business |
 | `money-atlas-intelligence-os` | Financial markets, macro, trading |
 | `alternative-coffee-intelligence` | Coffee science and roastery operations |

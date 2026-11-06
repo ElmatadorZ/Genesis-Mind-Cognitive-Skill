@@ -107,3 +107,21 @@ def test_engines_are_stdlib_only():
                 if root not in std and root not in local:
                     found.append(f"{'/'.join(rel)}: {root}")
     assert not found, "third-party imports break the stdlib-only promise: " + ", ".join(found)
+
+
+def test_body_sizes_answer_to_information_given():
+    """Blind eval of 5C.1: on a question with no facts the full structure ran ~1,000
+    words of generic scenarios and an ungrounded '70% confidence'. 5D requires a
+    short answer and no invented confidence in that case."""
+    _, body = _split()
+    assert "Proportion" in body
+    assert re.search(r"under ~?250 words", body)
+    assert re.search(r"no confidence percentage", body, re.I)
+
+
+def test_market_handoff_never_stands_alone():
+    """Blind eval of 5C.1: 'should I buy gold?' got a handoff to a skill that was not
+    installed and almost nothing else. The handoff must come with a useful answer."""
+    _, body = _split()
+    assert "never answer with the handoff alone" in body
+    assert re.search(r"No prices, levels or buy/sell calls", body)

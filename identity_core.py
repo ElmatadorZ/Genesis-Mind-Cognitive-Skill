@@ -6,9 +6,25 @@ import json, os
 
 class IdentityCore:
 
-    def __init__(self, path="state/identity.json"):
+    RISK = {"aggressive": "calculated_aggressive", "conservative": "conservative", "adaptive": "adaptive"}
+
+    def __init__(self, name=None, profile=None, path="state/identity.json"):
+        # IdentityCore(path) loads the persisted identity; IdentityCore(name, profile)
+        # builds an in-memory one (what MultiSelfSystem uses). Older callers passed
+        # the path positionally; a name ending in .json is still treated as a path.
+        if name and profile is None and str(name).endswith(".json"):
+            path, name = name, None
         self.path = path
-        self.identity = self.load()
+        self.persist = profile is None
+        if profile is not None:
+            self.identity = {
+                "name": name,
+                "values": list(profile.get("values", [])),
+                "risk_profile": self.RISK.get(profile.get("risk"), profile.get("risk", "adaptive")),
+            }
+        else:
+            self.identity = self.load()
+        self.name = name or self.identity.get("name")
 
     def load(self):
         if os.path.exists(self.path):
@@ -39,10 +55,14 @@ class IdentityCore:
         # 🔥 Identity Bias
         if self.identity["risk_profile"] == "calculated_aggressive":
             decision["confidence"] *= 1.1
+        elif self.identity["risk_profile"] == "conservative":
+            decision["confidence"] *= 0.9
 
         if "long-term dominance" in self.identity["values"]:
             decision["reason"] += " | aligned with long-term strategy"
 
+        decision["confidence"] = round(min(0.95, decision["confidence"]), 3)  # never certain
+        decision["identity"] = self.name
         return decision
 
     def reflect(self, outcome: str):
@@ -51,7 +71,8 @@ class IdentityCore:
         if "fail" in outcome:
             self.identity["risk_profile"] = "adaptive"
 
-        self.save()
+        if self.persist:
+            self.save()
 
     def summary(self):
         return self.identity

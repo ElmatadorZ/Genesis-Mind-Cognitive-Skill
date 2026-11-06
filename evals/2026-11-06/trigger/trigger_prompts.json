@@ -1,0 +1,52 @@
+[
+ {
+  "id": "T1",
+  "text": "should I take the job offer in Singapore or stay at my current company?",
+  "expected": "use"
+ },
+ {
+  "id": "T2",
+  "text": "What could go wrong if we move our whole team to a four-day week?",
+  "expected": "use"
+ },
+ {
+  "id": "T3",
+  "text": "Analyze why Thai specialty coffee exports are growing from first principles",
+  "expected": "use"
+ },
+ {
+  "id": "T4",
+  "text": "Design the system architecture for a multi-agent research assistant",
+  "expected": "use"
+ },
+ {
+  "id": "T5",
+  "text": "What is the capital of Australia?",
+  "expected": "none"
+ },
+ {
+  "id": "T6",
+  "text": "Translate 'thank you very much' into Japanese",
+  "expected": "none"
+ },
+ {
+  "id": "T7",
+  "text": "Fix this Python error: NameError: name 'pd' is not defined",
+  "expected": "none"
+ },
+ {
+  "id": "T8",
+  "text": "Should I buy gold this week?",
+  "expected": "other"
+ },
+ {
+  "id": "T9",
+  "text": "Give me a roast profile for a washed Ethiopian bean",
+  "expected": "other"
+ },
+ {
+  "id": "T10",
+  "text": "what is 15% of 240?",
+  "expected": "none"
+ }
+]

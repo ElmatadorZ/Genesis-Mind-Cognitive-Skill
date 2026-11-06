@@ -33,3 +33,9 @@ class ShadowGenesis:
             **data,
             "shadow": reflections
         }
+
+    def observe(self, context: str) -> str:
+        """Used by ShadowWrapper: the strongest counter-question for this context."""
+        reflection = f"What if the premise of '{context}' is wrong, and what would show it?"
+        self.silent_reflections.append(reflection)
+        return reflection

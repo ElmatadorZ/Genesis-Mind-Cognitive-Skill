@@ -1,0 +1,12 @@
+[
+{"id": "T1", "load": "genesis-mind-strategic-intelligence", "why": "'Should I...' decision with real-world trade-offs"},
+{"id": "T2", "load": "genesis-mind-strategic-intelligence", "why": "'What could go wrong' business decision analysis"},
+{"id": "T3", "load": "genesis-mind-strategic-intelligence", "why": "First-principles 'why' business analysis; description explicitly claims this"},
+{"id": "T4", "load": "genesis-mind-strategic-intelligence", "why": "System design is listed in its description"},
+{"id": "T5", "load": "none", "why": "Simple factual lookup"},
+{"id": "T6", "load": "none", "why": "Simple translation, no skill applies"},
+{"id": "T7", "load": "none", "why": "Routine coding fix, no skill applies"},
+{"id": "T8", "load": "money-atlas-intelligence-os", "why": "Should I buy an asset (gold)"},
+{"id": "T9", "load": "alternative-coffee-intelligence", "why": "Coffee roasting profile"},
+{"id": "T10", "load": "none", "why": "Trivial arithmetic"}
+]
