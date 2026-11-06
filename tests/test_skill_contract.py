@@ -81,7 +81,14 @@ def test_engines_are_stdlib_only():
     import ast
     import sys
 
-    std = set(sys.stdlib_module_names)
+    std = set(getattr(sys, "stdlib_module_names", ()))  # Python 3.10+
+    if not std:  # Python 3.9: list the standard library directory instead
+        import pkgutil
+        import sysconfig
+
+        stdlib = sysconfig.get_paths()["stdlib"]
+        std = {m.name for m in pkgutil.iter_modules([stdlib])} | set(sys.builtin_module_names)
+        std |= {"__future__", "typing", "dataclasses", "itertools", "math"}
     local = {p.stem for p in ROOT.rglob("*.py")} | {p.name for p in ROOT.iterdir() if p.is_dir()}
     found = []
     for f in ROOT.rglob("*.py"):
