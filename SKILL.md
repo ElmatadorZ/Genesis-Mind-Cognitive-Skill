@@ -1,6 +1,6 @@
 ---
 name: "genesis-mind-strategic-intelligence"
-version: "5C"
+version: "5C.1"
 author: "ElmatadorZ"
 description: |
   Use this skill for strategic decisions, business analysis, thesis building,

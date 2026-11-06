@@ -1,7 +1,7 @@
 # Genesis Mind Strategic Intelligence
 ### Claude Skill — Multi-Agent Strategic Reasoning System
 
-**Version:** 5C  
+**Version:** 5C.1 — Masterpiece  
 **Author:** Bunyawat Dechanon (ElmatadorZ)  
 **Brand:** Money Atlas 
 **Type:** Claude Custom Skill (SKILL.md format)
