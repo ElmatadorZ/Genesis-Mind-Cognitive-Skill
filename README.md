@@ -229,10 +229,12 @@ genesis-mind-strategic-intelligence/
 ├── shadow_genesis.py           ← Shadow critique layer
 ├── first_principle_codex.py    ← First Principle engine (full)
 │
-├── tests/                      ← 41 tests: engines, runtime end-to-end, skill contract
+├── .claude-plugin/              ← Claude Code marketplace + plugin manifests
+├── skills/genesis-mind-strategic-intelligence/SKILL.md  ← plugin copy of SKILL.md (kept identical by CI)
+├── tests/                      ← 46 tests: engines, runtime end-to-end, skill contract, plugin package
 ├── evals/2026-11-06/           ← prompts, rubric, every answer and every grade behind the results below
 ├── tools/validate_skill.py     ← installability + integrity checker (run in CI)
-└── .github/workflows/          ← CI: compile · skill integrity · tests · hygiene
+└── .github/workflows/          ← CI: compile · skill integrity · tests · plugin · hygiene
 ```
 
 ---
@@ -328,12 +330,12 @@ when the skill sits beside sibling skills that also claim every prompt.
 
 | | 5C | 5E |
 |---|---|---|
-| Tests | 21 | **41** |
+| Tests | 21 | **46** |
 | Modules that import | 26 of 32 | **35 of 35** |
 | Entry points that run end to end (`main`, `run`, `run_genesis`, `agent`, `first_principle_codex`) | 2 of 5 | **5 of 5** |
 | Runtime packages in requirements.txt | 7 (none used) | **0** |
 | Import time, `agents.analyst_llm` (median of 7) | 93 ms | **0.4 ms** |
-| CI jobs passing (Python 3.9 / 3.11 / 3.12) | 8 of 8 | **8 of 8** |
+| CI jobs passing (Python 3.9 / 3.11 / 3.12 + plugin) | 8 of 8 | **9 of 9** |
 
 ### Limits of this test
 
@@ -362,16 +364,48 @@ Option values in the demos (`OptionGenerator`) are illustrative constants, not e
 
 ---
 
-## How to Install (Claude Custom Skill)
+## How to Install
 
-1. Clone or download this repository
-2. Place the `genesis-mind-strategic-intelligence/` folder in your Claude skills directory
-3. The skill activates automatically on qualifying questions
-4. Or reference it explicitly in your system prompt
+### Claude Code (CLI) — recommended
 
-The entry point is **`SKILL.md`** (the Anthropic standard filename). The reasoning is
-self-contained in that file and needs no tools to run — see `metadata.compatibility` in its
-frontmatter. The Python modules are an optional execution layer.
+```bash
+claude plugin marketplace add ElmatadorZ/Genesis-Mind-Cognitive-Skill
+claude plugin install genesis-mind@elmatadorz
+```
+
+Or inside a Claude Code session:
+
+```
+/plugin marketplace add ElmatadorZ/Genesis-Mind-Cognitive-Skill
+/plugin install genesis-mind@elmatadorz
+```
+
+The skill then loads on qualifying questions, or call it directly as
+`/genesis-mind:genesis-mind-strategic-intelligence`. Update later with
+`claude plugin update genesis-mind@elmatadorz`; remove with `claude plugin uninstall genesis-mind@elmatadorz`.
+
+### Claude Code — manual (no marketplace)
+
+```bash
+git clone https://github.com/ElmatadorZ/Genesis-Mind-Cognitive-Skill.git
+mkdir -p ~/.claude/skills/genesis-mind-strategic-intelligence
+cp Genesis-Mind-Cognitive-Skill/SKILL.md ~/.claude/skills/genesis-mind-strategic-intelligence/
+```
+
+The folder name must be `genesis-mind-strategic-intelligence`, the skill's `name`.
+
+### claude.ai
+
+Settings → Capabilities → Skills → upload a zip of a folder named
+`genesis-mind-strategic-intelligence` containing this `SKILL.md`.
+
+### What gets installed
+
+The entry point is **`SKILL.md`**. The reasoning is self-contained in that file and needs no tools to
+run — see `metadata.compatibility` in its frontmatter. The Python modules are an optional execution
+layer and are not needed by the skill. The plugin package is `.claude-plugin/` plus
+`skills/genesis-mind-strategic-intelligence/SKILL.md`, an exact copy of the root `SKILL.md` that CI
+keeps in sync (`python tools/sync_plugin_skill.py` after editing).
 
 ---
 
@@ -383,7 +417,7 @@ Checked on every push, and runnable locally:
 pip install pytest pyyaml
 
 python tools/validate_skill.py   # frontmatter, license, and reasoning contract intact
-python -m pytest -q              # 41 tests: engines, every entry point end to end, skill contract
+python -m pytest -q              # 46 tests: engines, every entry point end to end, skill contract
 ```
 
 The tests pin the First Principle Codex's actual behaviour — the epistemic filter that drops

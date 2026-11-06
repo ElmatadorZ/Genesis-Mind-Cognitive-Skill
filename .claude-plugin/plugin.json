@@ -1,0 +1,18 @@
+{
+  "name": "genesis-mind",
+  "description": "Genesis Mind strategic intelligence: first-principle deconstruction, multi-agent reasoning and the Epistemic Core (assumption, known/unknown, counter-argument, grounded confidence, what changes the answer). Blind-evaluated against no skill.",
+  "version": "5.5.0",
+  "author": {
+    "name": "Bunyawat Dechanon (ElmatadorZ)"
+  },
+  "homepage": "https://github.com/ElmatadorZ/Genesis-Mind-Cognitive-Skill",
+  "repository": "https://github.com/ElmatadorZ/Genesis-Mind-Cognitive-Skill",
+  "license": "Apache-2.0",
+  "keywords": [
+    "reasoning",
+    "strategy",
+    "decision-making",
+    "first-principles",
+    "skill"
+  ]
+}

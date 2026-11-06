@@ -1,0 +1,14 @@
+{
+  "name": "elmatadorz",
+  "description": "Claude Code plugins by ElmatadorZ",
+  "owner": {
+    "name": "Bunyawat Dechanon (ElmatadorZ)"
+  },
+  "plugins": [
+    {
+      "name": "genesis-mind",
+      "source": "./",
+      "description": "Multi-agent strategic reasoning skill: first principles and the Epistemic Core"
+    }
+  ]
+}
