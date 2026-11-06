@@ -1,6 +1,5 @@
 # llm_client.py
-
-import requests
+# STUB: returns a simulated response. Not evidence of anything; replace with a real client.
 
 class LLMClient:
 

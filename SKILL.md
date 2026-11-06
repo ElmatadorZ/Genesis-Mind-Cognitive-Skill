@@ -3,17 +3,17 @@ name: "genesis-mind-strategic-intelligence"
 version: "5C"
 author: "ElmatadorZ"
 description: |
-  Use this skill for ANY of the following — do not skip it even if the query seems simple:
-  strategic decisions, business analysis, thesis building, complex problem solving,
-  geopolitical analysis (non-market), philosophical reasoning, academic research,
-  system design, decision under uncertainty, long-form thinking, or any question
-  that benefits from First Principle deconstruction and multi-agent reasoning.
-  
-  ALWAYS use this skill when the user asks about: why something works the way it does,
-  whether a decision is correct, how to think about a complex problem, what could go wrong,
-  analyzing a situation from multiple angles, or any "should I..." question involving
-  real-world trade-offs. This is NOT a market/trading skill — for financial markets,
-  BTC, gold, stocks, forex, macro economics, use money-atlas-intelligence-os instead.
+  Use this skill for strategic decisions, business analysis, thesis building,
+  complex problem solving, geopolitical analysis (non-market), philosophical
+  reasoning, academic research, system design, decision under uncertainty and
+  long-form thinking that benefits from First Principle deconstruction and
+  multi-agent reasoning. Typical asks: why something works the way it does,
+  whether a decision is correct, what could go wrong, analyzing a situation from
+  multiple angles, or a "should I..." question with real-world trade-offs.
+  Not for simple factual questions. This is NOT a market/trading skill — for
+  financial markets, BTC, gold, stocks, forex or macro economics, use
+  money-atlas-intelligence-os instead. When Genesis Protocol (the router skill)
+  is installed, it decides when this runs.
 license: "Apache-2.0"
 metadata:
   category: "reasoning"

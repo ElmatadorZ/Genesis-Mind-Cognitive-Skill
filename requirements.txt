@@ -1,7 +1,4 @@
-fastapi
-uvicorn
-python-dotenv
-numpy
-pydantic
-faiss-cpu
-requests
+# Runtime: none. The reasoning engines are stdlib-only (Python 3.9+).
+# Development / CI only:
+pytest
+pyyaml
