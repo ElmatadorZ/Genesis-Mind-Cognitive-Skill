@@ -1,0 +1,22 @@
+{
+ "P1": {
+  "X": "skill-5C.1",
+  "Y": "skill-5D",
+  "Z": "no-skill"
+ },
+ "P2": {
+  "X": "skill-5C.1",
+  "Y": "skill-5D",
+  "Z": "no-skill"
+ },
+ "P3": {
+  "X": "no-skill",
+  "Y": "skill-5C.1",
+  "Z": "skill-5D"
+ },
+ "P4": {
+  "X": "no-skill",
+  "Y": "skill-5D",
+  "Z": "skill-5C.1"
+ }
+}

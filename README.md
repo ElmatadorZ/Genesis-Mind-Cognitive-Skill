@@ -1,7 +1,7 @@
 # Genesis Mind Strategic Intelligence
 ### Claude Skill — Multi-Agent Strategic Reasoning System
 
-**Version:** 5D — Masterpiece  
+**Version:** 5D.1 — Masterpiece  
 **Author:** Bunyawat Dechanon (ElmatadorZ)  
 **Brand:** Money Atlas 
 **Type:** Claude Custom Skill (SKILL.md format)
@@ -230,9 +230,86 @@ genesis-mind-strategic-intelligence/
 ├── first_principle_codex.py    ← First Principle engine (full)
 │
 ├── tests/                      ← 39 tests: engines, runtime end-to-end, skill contract
+├── evals/2026-11-06/           ← prompts, rubric, every answer and every grade behind the results below
 ├── tools/validate_skill.py     ← installability + integrity checker (run in CI)
 └── .github/workflows/          ← CI: compile · skill integrity · tests · hygiene
 ```
+
+---
+
+## Test results — with the skill vs without it
+
+Measured on 2026-11-06. Everything behind these numbers is in [`evals/2026-11-06/`](evals/2026-11-06/):
+the prompts, the rubric, all 16 answers and all three grading rounds, so any figure here can be checked.
+
+### Answer quality (blind-graded)
+
+Four prompts, each answered by a fresh agent that had never seen this repository: once with no
+skill, and once each following `SKILL.md` 5C.1, 5D and 5D.1. One independent grader scored all 16
+answers on the same 10 criteria (0–2 each, 20 per answer) without knowing which answer came from
+which version, then ranked the four answers per prompt.
+
+| Prompt | No skill | 5C.1 | 5D | **5D.1** |
+|---|---|---|---|---|
+| P1 Quit a stable job (6 months of savings) to start a coffee brand? | 11 | 18 | 19 | **19** |
+| P2 Expand to Vietnam or stay in Thailand, 14 months of runway | 16 | 19 | 14 | **19** |
+| P3 "Is our new pricing plan a good idea?" (no plan given) | 12 | 17 | 14 | **14** |
+| P4 "Should I buy gold right now?" | 15 | 12 | 15 | **15** |
+| **Total (of 80)** | 54 | 66 | 62 | **67** |
+| **Ranked first by the grader** | 0 of 4 | 0 of 4 | 0 of 4 | **4 of 4** |
+| Mean rank (1 = best) | 3.00 | 3.25 | 2.75 | **1.00** |
+
+Where the skill moves the answer, per criterion (8 points max across the four prompts):
+
+| Criterion | No skill | 5C.1 | 5D.1 |
+|---|---|---|---|
+| States its confidence (C5) | 2 | 7 | 7 |
+| Makes the case against itself (C4) | 3 | 5 | 5 |
+| Compares more than one option (C3) | 5 | 7 | 7 |
+| Surfaces hidden assumptions (C1) | 4 | 7 | 6 |
+| Separates known from unknown (C2) | 4 | 7 | 6 |
+| Proportionate length (C9) | 7 | 4 | 6 |
+
+On P3 the grader ranked 5C.1 last despite its high rubric total: about 1,000 words of generic
+scenarios for a question that contained no plan. 5D.1 answers that prompt in 275 words with the
+facts that would decide it, which the grader preferred. On P4, 5C.1 mostly redirected the user to
+another skill; 5D.1 answers on its own and makes no buy/sell call or price claim.
+
+### How 5D.1 was reached
+
+| Round | Compared | Finding | Change |
+|---|---|---|---|
+| 1 | no skill vs 5C.1 | 64 vs 54, but too long on thin questions and an empty market handoff | 5D: proportion rule, handoff must stand alone |
+| 2 | no skill · 5C.1 · 5D | Length fixed, but the short form fired on P2, which had real facts (19 → 14) | 5D.1: short form only when the question names neither options nor a constraint |
+| 3 | all four, one grader | 5D.1 ranked first on every prompt | released |
+
+Rounds 1 and 2 used different graders, so their totals are not compared with round 3; the table above
+is round 3 only.
+
+### When the skill is picked (trigger test)
+
+Ten prompts, judged by an agent that saw only the skill descriptions: strategy questions, simple facts,
+code, and gold/coffee questions that belong to other skills. The 5C and 5C.1 descriptions both scored
+**10/10**. Removing "ALWAYS use / do not skip" changed nothing in this three-skill setup; it matters
+when the skill sits beside sibling skills that also claim every prompt.
+
+### Engineering, 5C → 5D.1
+
+| | 5C | 5D.1 |
+|---|---|---|
+| Tests | 21 | **39** |
+| Modules that import | 26 of 32 | **35 of 35** |
+| Entry points that run end to end (`main`, `run`, `run_genesis`, `agent`, `first_principle_codex`) | 2 of 5 | **5 of 5** |
+| Runtime packages in requirements.txt | 7 (none used) | **0** |
+| Import time, `agents.analyst_llm` (median of 7) | 93 ms | **0.4 ms** |
+| CI jobs passing (Python 3.9 / 3.11 / 3.12) | 8 of 8 | **8 of 8** |
+
+### Limits of this test
+
+Four prompts, one answer per version, one grader: the result shows a clear direction, not a
+statistically settled effect. "With the skill" means the agent read `SKILL.md` and followed it; the
+skill was not installed through a skills runtime. The trigger test used three skills, not the full
+Genesis ecosystem.
 
 ---
 

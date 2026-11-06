@@ -1,0 +1,114 @@
+{
+ "P1": {
+  "A": {
+   "C1": [1, "Implicitly challenges that 6 months is enough ('เงินก้อนนี้ต้องแบกสองอย่างพร้อมกัน') but never names assumptions, e.g. that quitting is needed to build the brand."],
+   "C2": [1, "Ends with a list of open questions (current coffee income, debts, dependents) but has no explicit known/unknown split."],
+   "C3": [1, "Gives one phased path (keep job, then quit on criteria, then fallback). Quitting now is rejected, not laid out as an option and compared."],
+   "C4": [0, "No case is made for quitting now. Downsides of part-time building (B2B needs weekday availability, limited energy) are absent."],
+   "C5": [0, "No confidence level. Opens with a flat verdict 'ยังไม่ควรลาออกตอนนี้ครับ'."],
+   "C6": [1, "Pre-set quit criteria and a 'วันเช็กชีวิต' 9 months out are course-change triggers, but it never says what would make the advice itself wrong."],
+   "C7": [2, "Concrete steps: toll roasting, 2-3 wholesale cafes, track cost per kg with 15-20% roast loss, profit covering 50-70% of expenses for 3 months."],
+   "C8": [1, "Mostly directive ('ยังไม่ควรลาออกตอนนี้', 'ลาออกเมื่อผ่านเงื่อนไขเหล่านี้แล้วเท่านั้น'). It is conditional on the 6-month figure and offers to tailor."],
+   "C9": [2, "Tight and proportionate, no filler."],
+   "C10": [2, "Built around the 6 months: shows the pool shrinks to 3-4 months once it also funds the business, and sets a 12-month separate reserve."]
+  },
+  "B": {
+   "C1": [2, "Names three assumptions ('ต้องลาออกก่อน', 'เงิน 6 เดือนพอ', 'ชอบกาแฟ = ทำแบรนด์ได้') and challenges each one."],
+   "C2": [2, "Explicit Known / Inferred / Unknown block, with the unknowns flagged as 'ตัวที่เปลี่ยนคำตอบได้'."],
+   "C3": [2, "Options A/B/C (quit now, parallel then leap, part-time or leave), each with gains, costs and 'พังเมื่อ'."],
+   "C4": [2, "The Skeptic makes the strongest counter: some businesses never grow part-time, cafes need weekday contact, and waiting too long is a risk."],
+   "C5": [2, "States 'CONFIDENCE: ~65%' and rough scenario odds, with a caveat that the odds are not precise."],
+   "C6": [2, "'สิ่งที่ทำให้คำแนะนำนี้ไม่ใช้ได้' lists four conditions (sales already near the bar, a big B2B deal, a partner's income, health)."],
+   "C7": [2, "Measurable quit criteria (2 of 3), a 9-12 month reserve, a 6-12 month deadline, and an offer to compute runway."],
+   "C8": [2, "Explicit: 'การตัดสินใจเป็นของคุณ'. The recommendation is conditional."],
+   "C9": [1, "Framework scaffolding pads it: emoji headers, 'Forecaster: ดูด้านล่าง', and a system map that adds little. Several points repeat across sections."],
+   "C10": [2, "Uses 6 months throughout: 'เวลาสำหรับเอาตัวรอด ไม่ใช่เงินทุน', only 3-4 real months, and money running out in months 4-5 in the bear case."]
+  },
+  "prefer": "B",
+  "why": "B covers the same practical advice as A and adds a real counter-argument, options laid side by side, explicit invalidation conditions and a confidence level, which a demanding expert would want. Neither has a hard factual error, but both state '12-24 months to build a repeat customer base / break even' without support, and B's scenario odds (15-20/40/35-40/<5%) are invented precision, though flagged as rough."
+ },
+ "P2": {
+  "A": {
+   "C1": [2, "Challenges '14 months to experiment' and reframes to 'The question underneath: how strong is Thailand?'. Also questions whether the playbook carries over."],
+   "C2": [1, "Ends with questions for the team and asks for sector, metrics and burn, but does not separate what is known from what is assumed."],
+   "C3": [2, "Compares double down, expand, and a middle path (cheap Vietnam tests with go/no-go criteria)."],
+   "C4": [1, "Section 5 'When expanding now might make sense' gives counter-conditions, but there is no strongest argument against its own Thailand-first lean."],
+   "C5": [0, "No confidence statement, only hedges like 'almost always wins' and 'probably still be unclear'."],
+   "C6": [2, "Section 5 lists when its default flips: funded partner, first-mover window, investor demand, Thailand saturated."],
+   "C7": [2, "Spend 5-10% on Vietnam tests (interviews, landing page), set X/Y/Z go/no-go criteria, five team questions."],
+   "C8": [2, "Gives a 'default answer' conditioned on the stated cases and gives the team questions to settle."],
+   "C9": [2, "Proportionate and well organised, no repetition."],
+   "C10": [2, "Opens with 14 months and splits it: 4-6 months of fundraising leaves about 8 months, against 6-12 months for a new country to show signal."]
+  },
+  "B": {
+   "C1": [2, "Three labelled assumptions (growth needs a new market, the playbook transfers, the choice is binary), each challenged."],
+   "C2": [2, "Explicit Known / Inferred / Unknown (and decisive) block. It also says up front that product, traction and burn are missing."],
+   "C3": [2, "Options A/B/C with trade-offs, 'Breaks if' and rough odds."],
+   "C4": [2, "The Skeptic argues 'double down on Thailand can also be a trap' if Thailand is small, which goes against its own lean."],
+   "C5": [2, "'CONFIDENCE: about 60%', plus odds on each option."],
+   "C6": [2, "'This recommendation is wrong if:' lists Thailand ceiling, Vietnam pull, near profitability, investor mandate."],
+   "C7": [2, "Cap the probe at 10% of burn with no entity and a non-CEO owner, proof criteria within 4 months, model runway with Vietnam signal at 6/9/12 months."],
+   "C8": [2, "Conditional default with explicit wrongness conditions. Asks for numbers to model rather than ordering."],
+   "C9": [1, "About 50% longer than A for largely the same substance. The runway arithmetic and the 'two half-built markets' point repeat across sections."],
+   "C10": [2, "Same 14 to 8 months breakdown, and a bear case where runway falls to 9-10 months."]
+  },
+  "prefer": "B",
+  "why": "Both reach the same sound conclusion (Thailand-first plus a capped Vietnam probe, expand on new capital), but B adds the known/unknown split, a real counter-argument and explicit invalidation conditions, at the cost of length. No factual errors found (Vietnam ~100M population in A is correct), but B's option odds (45/15/40%) and A's 'under 12 months' payback benchmark are unsupported numbers; B at least labels its burn figures 'illustrative'."
+ },
+ "P3": {
+  "A": {
+   "C1": [0, "Does not surface the user's assumptions (e.g. that 'new' means better, or what goal the plan serves). It lists checks instead."],
+   "C2": [1, "States plainly that nothing about the plan is known and lists the data needed, but has no known/assumed split."],
+   "C3": [0, "Mentions 'launch it, change it, or drop it' and testing on new customers, but compares no options."],
+   "C4": [0, "No counter-argument."],
+   "C5": [1, "'I can't judge it yet' states the uncertainty, but there is no confidence framing beyond that."],
+   "C6": [1, "The break-even check ('If that number is small, the plan is fragile') and the top-20% risk act as failure tests, not explicit invalidation conditions."],
+   "C7": [2, "Eight concrete checks plus a list of exactly what to send (old and new pricing, unit costs, customers per tier, goal)."],
+   "C8": [2, "Gives no verdict and sets out the criteria."],
+   "C9": [2, "Tight and proportionate for a question with no information."],
+   "C10": [2, "'Nothing about it has been shared with me'. Invents nothing about the plan, though 'product, shipping' leans toward physical goods."]
+  },
+  "B": {
+   "C1": [2, "Challenges 'new pricing plan means better', 'customers see it as intended' and 'success can be measured'."],
+   "C2": [2, "Known / Inferred / Unknown block. The inference ('about to launch or just launched') is flagged as an inference."],
+   "C3": [2, "Options A/B/C (full rollout, staged, hold and validate) with trade-offs and risk."],
+   "C4": [1, "The Skeptic lists common failure modes but makes no case against its own staged-rollout lean."],
+   "C5": [2, "'Not assessable on the plan itself (0 inputs)'. Also gives about 70% for the staged default, which is a made-up figure."],
+   "C6": [2, "'likely a good idea if all of these hold' / 'likely a bad idea if...' set clear conditions."],
+   "C7": [2, "Send old and new pricing, the goal and customer numbers. Test on new customers first and set pass/fail metrics before launch."],
+   "C8": [2, "'The decision is yours. This only sets out the reasoning.'"],
+   "C9": [0, "About 1,000 words of full framework (system map, four generic scenarios, five agents) for a question with no plan in it. Much of it is admittedly generic ('generic shapes, not predictions')."],
+   "C10": [2, "'I won't make one up'. No invented plan facts, and the scenarios are labelled 'structural, not plan-specific'."]
+  },
+  "prefer": "A",
+  "why": "With zero information given, A does the honest, useful thing in a fraction of the space: it says it cannot judge, gives sharp checks (break-even customer loss, top-20% exposure, grandfathering) and asks for exactly what it needs. B scores more rubric boxes but pads heavily with generic scenarios and agent commentary, and its '70% confidence in the staged-rollout default' is a number with no basis."
+ },
+ "P4": {
+  "A": {
+   "C1": [1, "Challenges the 'now' framing ('ไม่มีใครรู้ว่า ตอนนี้ เป็นจุดที่ดีที่สุด') and redirects to purpose, but does not name assumptions explicitly."],
+   "C2": [1, "States it cannot see real-time prices ('ไม่เห็นราคาทองแบบเรียลไทม์'). The rest is general principle with no known/unknown split."],
+   "C3": [2, "Compares buy for long-term hedge vs speculation, DCA vs lump sum vs 30-50% now, and bars vs jewellery vs savings apps vs ETF."],
+   "C4": [1, "Notes gold 'เคยลงหนักและซึมยาวหลายปี', has no dividend or interest, and warns about FOMO buying. A partial counter to buying."],
+   "C5": [1, "Says nobody knows if now is the right time, but gives no confidence level."],
+   "C6": [2, "Summary gives explicit conditions to wait or rethink: money needed soon, or buying from FOMO after a spike. Also the 10-20% drawdown test."],
+   "C7": [2, "Check the 3-6 month emergency fund and high-interest debt, size at 5-15%, DCA, prefer bars, watch the spread."],
+   "C8": [2, "Conditional 'ซื้อได้ถ้า... / ควรรอถ้า...'. Leaves the choice to the user and asks for their goal and budget."],
+   "C9": [2, "Proportionate. Each section adds practical content."],
+   "C10": [2, "No buy/sell call and no prices or levels stated. Explains that Thai gold price = spot price × THB rate."]
+  },
+  "B": {
+   "C1": [1, "Reframes to a 'better question' (can you hold through a 10-20% drop) but does not examine assumptions further."],
+   "C2": [1, "Lists unknowns (real-time price, THB/USD, real rates, goal, horizon) but nothing is set against them as known."],
+   "C3": [0, "Lists forms and entry methods only as questions for the user to answer. No options are compared."],
+   "C4": [0, "No counter-argument. It declines to analyse."],
+   "C5": [1, "'CONFIDENCE: ไม่ประเมิน (นอกโดเมน)'. It is explicit that it will not assess, but gives no substantive uncertainty."],
+   "C6": [0, "No recommendation, so there are no invalidation conditions."],
+   "C7": [1, "Lists five facts to prepare and the drawdown test, but the main next step is to go to another system ('เปิด Money Atlas Intelligence OS')."],
+   "C8": [2, "No call. 'คุณเป็นคนตัดสินใจเอง'."],
+   "C9": [1, "Short, but much of it is meta talk about domain scope and routing rather than help."],
+   "C10": [2, "No buy/sell call and no prices stated."]
+  },
+  "prefer": "A",
+  "why": "A answers the real question responsibly: no timing call or price claims, and actionable sizing, DCA and Thai-market mechanics (bars vs jewellery making charge, spot × THB, spread). B mostly deflects to another tool and leaves the user with almost nothing beyond the drawdown test. Neither contains a factual error; A's '5-15% of portfolio' is a common rule of thumb, not a sourced fact."
+ }
+}
