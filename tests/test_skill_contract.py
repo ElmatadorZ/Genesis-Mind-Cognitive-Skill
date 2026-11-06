@@ -117,11 +117,15 @@ def test_body_sizes_answer_to_information_given():
     assert "Proportion" in body
     assert re.search(r"under ~?250 words", body)
     assert re.search(r"no confidence percentage", body, re.I)
+    # ...but only when the question gives no specifics: 5D applied the short form to a
+    # question with a 14-month runway and two named options, and scored 19 -> 14.
+    assert re.search(r"names the options \*\*or\*\* at least one hard\s+constraint", body)
 
 
 def test_market_handoff_never_stands_alone():
     """Blind eval of 5C.1: 'should I buy gold?' got a handoff to a skill that was not
     installed and almost nothing else. The handoff must come with a useful answer."""
     _, body = _split()
-    assert "never answer with the handoff alone" in body
-    assert re.search(r"No prices, levels or buy/sell calls", body)
+    assert "never answer with a handoff alone" in body
+    assert "must stand on its own" in body
+    assert re.search(r"No prices,\s+levels or buy/sell calls", body)
