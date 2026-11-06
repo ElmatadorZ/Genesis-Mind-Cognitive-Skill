@@ -111,15 +111,33 @@ def test_engines_are_stdlib_only():
 
 def test_body_sizes_answer_to_information_given():
     """Blind eval of 5C.1: on a question with no facts the full structure ran ~1,000
-    words of generic scenarios and an ungrounded '70% confidence'. 5D requires a
-    short answer and no invented confidence in that case."""
+    words of generic scenarios. The short form is for questions with no specifics,
+    and only for those: 5D used it on a question with a 14-month runway and two
+    named options and scored 19 -> 14."""
     _, body = _split()
     assert "Proportion" in body
-    assert re.search(r"under ~?250 words", body)
-    assert re.search(r"no confidence percentage", body, re.I)
-    # ...but only when the question gives no specifics: 5D applied the short form to a
-    # question with a 14-month runway and two named options, and scored 19 -> 14.
+    assert re.search(r"under ~?300 words", body, re.I)
     assert re.search(r"names the options \*\*or\*\* at least one hard\s+constraint", body)
+
+
+def test_epistemic_core_survives_every_length():
+    """Blind eval of 5D.1: the short form dropped the five moves along with the
+    length and lost 9 points on two prompts. All five are required at every length."""
+    _, body = _split()
+    for move in ("Assumption", "Known / Unknown", "Counter", "Confidence", "What changes this"):
+        assert f"**{move}**" in body, f"Epistemic Core move missing: {move}"
+    assert "Cutting length never cuts a move" in body
+    short = body.split("OUTPUT STRUCTURE — Short", 1)[1].split("---", 1)[0]
+    for field in ("ASSUMPTION", "KNOWN / UNKNOWN", "COUNTER", "CONFIDENCE", "WHAT CHANGES THIS"):
+        assert field in short, f"short form lacks {field}"
+
+
+def test_sections_may_not_restate():
+    """Blind eval of 5D.1: full answers lost concision because sections repeated
+    each other. Optional sections are marked optional and restating is forbidden."""
+    _, body = _split()
+    assert "No section restates another" in body
+    assert "only if it adds" in body
 
 
 def test_market_handoff_never_stands_alone():
