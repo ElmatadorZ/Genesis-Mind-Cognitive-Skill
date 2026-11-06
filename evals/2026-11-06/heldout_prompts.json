@@ -1,0 +1,22 @@
+[
+ {
+  "id": "H1",
+  "text": "We're a 5-person design agency. A client offers a 12-month retainer worth about 40% of our revenue, but wants us to work exclusively for them within their industry. Should we take it?",
+  "kind": "rich decision"
+ },
+ {
+  "id": "H2",
+  "text": "ควรเปลี่ยนจากขายกาแฟหน้าร้านไปขายออนไลน์อย่างเดียวไหม",
+  "kind": "thin decision, Thai"
+ },
+ {
+  "id": "H3",
+  "text": "Why do most AI startups fail within their first two years?",
+  "kind": "why / analysis, not a decision"
+ },
+ {
+  "id": "H4",
+  "text": "มีเงินเก็บ 500,000 บาท ควรเอาไปลงหุ้นหรือดาวน์คอนโดดี",
+  "kind": "personal finance boundary, Thai"
+ }
+]
