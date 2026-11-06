@@ -1,7 +1,7 @@
 # Genesis Mind Strategic Intelligence
 ### Claude Skill — Multi-Agent Strategic Reasoning System
 
-**Version:** 5D.1 — Masterpiece  
+**Version:** 5E — Masterpiece  
 **Author:** Bunyawat Dechanon (ElmatadorZ)  
 **Brand:** Money Atlas 
 **Type:** Claude Custom Skill (SKILL.md format)
@@ -229,7 +229,7 @@ genesis-mind-strategic-intelligence/
 ├── shadow_genesis.py           ← Shadow critique layer
 ├── first_principle_codex.py    ← First Principle engine (full)
 │
-├── tests/                      ← 39 tests: engines, runtime end-to-end, skill contract
+├── tests/                      ← 41 tests: engines, runtime end-to-end, skill contract
 ├── evals/2026-11-06/           ← prompts, rubric, every answer and every grade behind the results below
 ├── tools/validate_skill.py     ← installability + integrity checker (run in CI)
 └── .github/workflows/          ← CI: compile · skill integrity · tests · hygiene
@@ -240,51 +240,82 @@ genesis-mind-strategic-intelligence/
 ## Test results — with the skill vs without it
 
 Measured on 2026-11-06. Everything behind these numbers is in [`evals/2026-11-06/`](evals/2026-11-06/):
-the prompts, the rubric, all 16 answers and all three grading rounds, so any figure here can be checked.
+prompts, rubrics, every answer and every grade, so any figure here can be checked.
 
-### Answer quality (blind-graded)
+### Answer quality — latest round (5E)
 
-Four prompts, each answered by a fresh agent that had never seen this repository: once with no
-skill, and once each following `SKILL.md` 5C.1, 5D and 5D.1. One independent grader scored all 16
-answers on the same 10 criteria (0–2 each, 20 per answer) without knowing which answer came from
-which version, then ranked the four answers per prompt.
+Eight prompts. Four were used while developing the skill (P1–P4); **four are held out (H1–H4)**: written
+after 5E was finished and never used to tune it, so they test whether the gains generalise. Each prompt
+was answered by a fresh agent that had never seen this repository: once with no skill, once following
+`SKILL.md` 5D.1, once following 5E. **Two independent graders** each scored all 24 answers on 10
+criteria (0–2 each, 20 per answer) without knowing which answer came from which version; the table
+shows their average.
 
-| Prompt | No skill | 5C.1 | 5D | **5D.1** |
-|---|---|---|---|---|
-| P1 Quit a stable job (6 months of savings) to start a coffee brand? | 11 | 18 | 19 | **19** |
-| P2 Expand to Vietnam or stay in Thailand, 14 months of runway | 16 | 19 | 14 | **19** |
-| P3 "Is our new pricing plan a good idea?" (no plan given) | 12 | 17 | 14 | **14** |
-| P4 "Should I buy gold right now?" | 15 | 12 | 15 | **15** |
-| **Total (of 80)** | 54 | 66 | 62 | **67** |
-| **Ranked first by the grader** | 0 of 4 | 0 of 4 | 0 of 4 | **4 of 4** |
-| Mean rank (1 = best) | 3.00 | 3.25 | 2.75 | **1.00** |
-
-Where the skill moves the answer, per criterion (8 points max across the four prompts):
-
-| Criterion | No skill | 5C.1 | 5D.1 |
+| Prompt | No skill | 5D.1 | **5E** |
 |---|---|---|---|
-| States its confidence (C5) | 2 | 7 | 7 |
-| Makes the case against itself (C4) | 3 | 5 | 5 |
-| Compares more than one option (C3) | 5 | 7 | 7 |
-| Surfaces hidden assumptions (C1) | 4 | 7 | 6 |
-| Separates known from unknown (C2) | 4 | 7 | 6 |
-| Proportionate length (C9) | 7 | 4 | 6 |
+| P1 Quit a stable job (6 months of savings) for a coffee brand? | 11.5 | 18.0 | **19.5** |
+| P2 Vietnam or Thailand, 14 months of runway | 16.0 | 18.5 | **19.5** |
+| P3 "Is our new pricing plan a good idea?" (no plan given) | 8.5 | 13.0 | **18.0** |
+| P4 "Should I buy gold right now?" | 15.0 | 14.5 | **17.0** |
+| *Seen prompts (of 80)* | *51.0* | *64.0* | ***74.0*** |
+| H1 5-person agency: 12-month retainer, 40% of revenue, exclusivity | 16.0 | 18.0 | **20.0** |
+| H2 Move a coffee shop to online-only? (no other facts) | 14.0 | 18.0 | **18.5** |
+| H3 Why do most AI startups fail within two years? | 10.0 | 18.0 | **19.0** |
+| H4 500,000 THB: stocks or a condo down payment? | 12.0 | 17.0 | **19.0** |
+| ***Held-out prompts (of 80)*** | *52.0* | *71.0* | ***76.5*** |
+| **All eight (of 160)** | **103.0** | **135.0** | **150.5** |
 
-On P3 the grader ranked 5C.1 last despite its high rubric total: about 1,000 words of generic
-scenarios for a question that contained no plan. 5D.1 answers that prompt in 275 words with the
-facts that would decide it, which the grader preferred. On P4, 5C.1 mostly redirected the user to
-another skill; 5D.1 answers on its own and makes no buy/sell call or price claim.
+| | No skill | 5D.1 | **5E** |
+|---|---|---|---|
+| Ranked first — grader A | 0 of 8 | 1 of 8 | **7 of 8** |
+| Ranked first — grader B | 0 of 8 | 2 of 8 | **6 of 8** |
 
-### How 5D.1 was reached
+On the held-out prompts, 5E scores 76.5 of 80 against 52 without the skill: the gain is not an artefact
+of tuning on the same questions. The two graders differed by 0.7 points per answer on average, and by at most 3.
+
+Per criterion, summed over the eight prompts (16 max, average of both graders):
+
+| Criterion | No skill | 5D.1 | **5E** |
+|---|---|---|---|
+| C1 Surfaces and challenges assumptions | 7.0 | 14.0 | **16.0** |
+| C2 Separates known from unknown | 8.0 | 14.0 | **16.0** |
+| C3 Compares more than one option | 13.5 | 15.0 | 13.5 |
+| C4 Makes the case against itself | 6.0 | 10.5 | **16.0** |
+| C5 States its confidence | 3.0 | 14.0 | **15.0** |
+| C6 Says what would make it wrong | 11.0 | 13.0 | **14.0** |
+| C7 Gives an actionable next step | 16.0 | 14.5 | 14.0 |
+| C8 Leaves the decision to the human | 13.5 | 16.0 | **16.0** |
+| C9 Proportionate length | 12.5 | 8.5 | **14.0** |
+| C10 Prompt-specific (uses the facts / no invented facts) | 12.5 | 15.5 | **16.0** |
+
+5E leads on seven criteria and ties 5D.1 on one (C8). Two are still open: comparing options (C3) and a concrete next step
+(C7), where answers without the skill do as well or better. Those are the next things to improve.
+
+### What changed in 5E, and why
+
+A first-principle reading of the 5D.1 grades: the skill's value is five moves — name the assumption,
+separate known from unknown, argue against itself, state a grounded confidence, say what would change
+the answer. 5D.1 tied those moves to an eight-section template, which produced two failures:
+
+- **Full answers** repeated themselves across sections and lost the concision point.
+- **Short answers** dropped the five moves along with the length, losing 9 points on two prompts.
+
+5E separates the moves from the template: all five are required at every length (one line each in a
+short answer), optional sections appear only when they add something new, and full answers aim near
+600 words. The systems view was the feedback loop "more sections → more coverage → more repetition →
+lower concision"; the leverage point was making the moves independent of the sections.
+
+### How the current version was reached
 
 | Round | Compared | Finding | Change |
 |---|---|---|---|
 | 1 | no skill vs 5C.1 | 64 vs 54, but too long on thin questions and an empty market handoff | 5D: proportion rule, handoff must stand alone |
 | 2 | no skill · 5C.1 · 5D | Length fixed, but the short form fired on P2, which had real facts (19 → 14) | 5D.1: short form only when the question names neither options nor a constraint |
-| 3 | all four, one grader | 5D.1 ranked first on every prompt | released |
+| 3 | no skill · 5C.1 · 5D · 5D.1, one grader | 5D.1 ranked first on every prompt (67 of 80); lost points on concision when full, on the five moves when short | 5E: the five moves at every length, no restating |
+| 4 | no skill · 5D.1 · 5E on 8 prompts (4 held out), two graders | 5E 150.5 of 160, held-out 76.5 of 80 | released |
 
-Rounds 1 and 2 used different graders, so their totals are not compared with round 3; the table above
-is round 3 only.
+Each round used new graders, so totals are compared only within a round. Grader variance is real: 5D.1
+scored 67 of 80 on P1–P4 in round 3 and 64 in round 4.
 
 ### When the skill is picked (trigger test)
 
@@ -293,11 +324,11 @@ code, and gold/coffee questions that belong to other skills. The 5C and 5C.1 des
 **10/10**. Removing "ALWAYS use / do not skip" changed nothing in this three-skill setup; it matters
 when the skill sits beside sibling skills that also claim every prompt.
 
-### Engineering, 5C → 5D.1
+### Engineering, 5C → 5E
 
-| | 5C | 5D.1 |
+| | 5C | 5E |
 |---|---|---|
-| Tests | 21 | **39** |
+| Tests | 21 | **41** |
 | Modules that import | 26 of 32 | **35 of 35** |
 | Entry points that run end to end (`main`, `run`, `run_genesis`, `agent`, `first_principle_codex`) | 2 of 5 | **5 of 5** |
 | Runtime packages in requirements.txt | 7 (none used) | **0** |
@@ -306,8 +337,8 @@ when the skill sits beside sibling skills that also claim every prompt.
 
 ### Limits of this test
 
-Four prompts, one answer per version, one grader: the result shows a clear direction, not a
-statistically settled effect. "With the skill" means the agent read `SKILL.md` and followed it; the
+Eight prompts, one answer per version per prompt, two graders: the direction is clear and consistent
+across graders and across held-out prompts, but this is not a statistically settled effect size. "With the skill" means the agent read `SKILL.md` and followed it; the
 skill was not installed through a skills runtime. The trigger test used three skills, not the full
 Genesis ecosystem.
 
@@ -352,7 +383,7 @@ Checked on every push, and runnable locally:
 pip install pytest pyyaml
 
 python tools/validate_skill.py   # frontmatter, license, and reasoning contract intact
-python -m pytest -q              # 39 tests: engines, every entry point end to end, skill contract
+python -m pytest -q              # 41 tests: engines, every entry point end to end, skill contract
 ```
 
 The tests pin the First Principle Codex's actual behaviour — the epistemic filter that drops

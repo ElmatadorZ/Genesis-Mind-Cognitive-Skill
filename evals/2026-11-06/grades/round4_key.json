@@ -1,0 +1,42 @@
+{
+ "P1": {
+  "X": "skill-5E",
+  "Y": "skill-5D.1",
+  "Z": "no-skill"
+ },
+ "P2": {
+  "X": "skill-5D.1",
+  "Y": "no-skill",
+  "Z": "skill-5E"
+ },
+ "P3": {
+  "X": "skill-5E",
+  "Y": "skill-5D.1",
+  "Z": "no-skill"
+ },
+ "P4": {
+  "X": "no-skill",
+  "Y": "skill-5D.1",
+  "Z": "skill-5E"
+ },
+ "H1": {
+  "X": "no-skill",
+  "Y": "skill-5D.1",
+  "Z": "skill-5E"
+ },
+ "H2": {
+  "X": "skill-5D.1",
+  "Y": "skill-5E",
+  "Z": "no-skill"
+ },
+ "H3": {
+  "X": "skill-5D.1",
+  "Y": "no-skill",
+  "Z": "skill-5E"
+ },
+ "H4": {
+  "X": "skill-5E",
+  "Y": "skill-5D.1",
+  "Z": "no-skill"
+ }
+}

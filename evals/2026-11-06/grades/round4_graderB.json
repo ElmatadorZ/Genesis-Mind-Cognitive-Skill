@@ -1,0 +1,1074 @@
+{
+ "H4": {
+  "X": {
+   "C1": [
+    2,
+    "Three explicit assumption/challenge pairs, e.g. stocks vs condo are not the same kind of 500k bet (debt over 20-30 years)."
+   ],
+   "C2": [
+    2,
+    "SITUATION and EPISTEMIC CORE list known (500k, two options) vs unknown (income, debt, emergency fund, purpose, horizon)."
+   ],
+   "C3": [
+    2,
+    "Options A condo / B stocks / C hybrid, each with fit conditions and failure modes."
+   ],
+   "C4": [
+    2,
+    "COUNTER: an affordable condo mortgage may build more wealth than undisciplined stock trading."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE: cannot rank A vs B yet, but high confidence in emergency fund first."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS plus conditional recommendation bullets (no emergency fund, unsure where you'll live in 5 years)."
+   ],
+   "C7": [
+    2,
+    "First step: compare current rent with installment+interest+common fees for the target condo."
+   ],
+   "C8": [
+    2,
+    "Conditional decision rules; says data is insufficient to choose for the user."
+   ],
+   "C9": [
+    1,
+    "Mostly tight, but EPISTEMIC CORE restates assumptions and unknowns already covered above."
+   ],
+   "C10": [
+    2,
+    "No prices, rates or returns stated; only conditional rules of thumb (1/3 of income, -20% test)."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Three assumptions challenged, incl. 'condo builds equity instead of wasting rent'."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Unknown lists in SITUATION ANALYSIS."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C plus Bull/Bear/Base/Black Swan scenarios."
+   ],
+   "C4": [
+    1,
+    "Skeptic voices risks on both sides, but no strongest case against its own lean toward the hybrid C."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE ~60% on 'reserve first, then split', cannot choose A vs B yet."
+   ],
+   "C6": [
+    2,
+    "Explicit invalidation: high-interest debt, need money in 1-3 years, project-specific data."
+   ],
+   "C7": [
+    2,
+    "Executor's three steps: set aside 6 months, compute bank-approved installment vs income, define condo purpose."
+   ],
+   "C8": [
+    2,
+    "Ordered conditional decision path; no order issued."
+   ],
+   "C9": [
+    0,
+    "Bloated: unknowns listed twice, options repeat scenarios, 'Forecaster: see Scenarios' filler, system map adds little."
+   ],
+   "C10": [
+    2,
+    "No live prices or returns; 'about 30%' is a stated rule of thumb; mentions specific business tax only as something to verify."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Implicitly challenges the either/or and live-in vs invest framing, without naming assumptions."
+   ],
+   "C2": [
+    1,
+    "Ends with a list of info it needs, but no explicit known/unknown separation."
+   ],
+   "C3": [
+    2,
+    "Comparison table plus a middle path with two variants."
+   ],
+   "C4": [
+    0,
+    "No strongest case against its implicit lean toward index-fund DCA and renting."
+   ],
+   "C5": [
+    0,
+    "No confidence statement beyond 'no single right answer'."
+   ],
+   "C6": [
+    1,
+    "'Suitable when' conditions in the table, but no explicit 'this is wrong if' conditions."
+   ],
+   "C7": [
+    2,
+    "Three pre-checks (emergency fund, high-interest debt, income stability) and an offer to run buy vs rent+invest numbers."
+   ],
+   "C8": [
+    2,
+    "Frames the decision, recommends a CFP; no order."
+   ],
+   "C9": [
+    2,
+    "Tight and practical, length proportionate."
+   ],
+   "C10": [
+    1,
+    "States historical global index returns ~6-8%/yr and rental yields 3-5% as figures (hedged 'not guaranteed') and 'Thai condos in many areas barely rise' without sources."
+   ]
+  },
+  "rank": [
+   "X",
+   "Y",
+   "Z"
+  ],
+  "why": "X covers the same decision logic as Y (debt vs investment, emergency fund first, conditional rules, explicit counter and confidence) in about two-thirds the length; Y is thorough but repetitive, and its weighting of option C is presented as a probability without basis. Z is practical (SSF/RMF/ThaiESG, buy-vs-rent offer) but states unsourced return figures (6-8% index, 3-5% yield) and has no counter-argument or confidence; no outright factual errors seen in any answer."
+ },
+ "H3": {
+  "X": {
+   "C1": [
+    2,
+    "Checks the premise ('most fail within two years' is [UNVERIFIED]) and challenges three assumptions, e.g. 'the model is the product'."
+   ],
+   "C2": [
+    2,
+    "Explicit KNOWN / INFERRED / UNKNOWN section."
+   ],
+   "C3": [
+    2,
+    "Several distinct mechanisms (platform squeeze, demand vs demo, inference economics, capital timing, reliability)."
+   ],
+   "C4": [
+    2,
+    "SHADOW ENGINE: selection bias / normal base rate, acqui-hires not deaths, wrappers sometimes win."
+   ],
+   "C5": [
+    1,
+    "Says confidence 'not assessable as a single number' and labels claims as inferred, but gives no level for the mechanisms."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS: category survival data, lasting inference-cost drop, providers staying out of apps."
+   ],
+   "C7": [
+    1,
+    "Leverage point (own the workflow/data) is guidance, but no concrete next step; acceptable for an analysis question."
+   ],
+   "C8": [
+    2,
+    "Presents multiple interacting causes and says the AI-specific share is unknown."
+   ],
+   "C9": [
+    2,
+    "Dense, little padding."
+   ],
+   "C10": [
+    2,
+    "No invented statistics; the premise figure is flagged unverified and the 18-24 month round timing is framed as a pattern."
+   ]
+  },
+  "Y": {
+   "C1": [
+    1,
+    "Opening caveat that the 'most fail in two years' numbers are loose; no further assumptions challenged."
+   ],
+   "C2": [
+    1,
+    "Separates 'loose numbers' from 'well-documented failure modes' only in the intro."
+   ],
+   "C3": [
+    2,
+    "Seven failure categories plus survivor traits."
+   ],
+   "C4": [
+    0,
+    "No counter-argument, e.g. that AI startups may simply fail at the normal startup base rate."
+   ],
+   "C5": [
+    1,
+    "Only the caveat on the statistic; no confidence in its own analysis."
+   ],
+   "C6": [
+    0,
+    "Nothing on what evidence would change the explanation."
+   ],
+   "C7": [
+    2,
+    "Gives a usable test question: 'What happens to us when the next model release comes out?'"
+   ],
+   "C8": [
+    1,
+    "Lists many causes, but the summary 'they build features instead of businesses' is asserted as the settled cause."
+   ],
+   "C9": [
+    1,
+    "Long bulleted lists, some overlap (thin wrapper vs moat vs survivors' traits)."
+   ],
+   "C10": [
+    1,
+    "Unsourced figures presented as fact: gross margins '30-50% or lower instead of 80%', '80% vs 99% accuracy'."
+   ]
+  },
+  "Z": {
+   "C1": [
+    2,
+    "Challenges the premise as an assumption ([UNVERIFIED]) and asks 'fail compared to what?'."
+   ],
+   "C2": [
+    2,
+    "KNOWN / UNKNOWN: failure modes inferred from market structure; real rate and split by layer unknown."
+   ],
+   "C3": [
+    2,
+    "Five factors and a split by type (wrappers, vertical tools, infra)."
+   ],
+   "C4": [
+    2,
+    "COUNTER: AI startups may fail for the usual reasons, with 'AI' adding little explanation."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE: moderate on mechanisms, rate not assessable without cohort data."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS: cohort data matching other software startups, or infra/vertical surviving far longer."
+   ],
+   "C7": [
+    1,
+    "Questions to ask first, but no concrete action."
+   ],
+   "C8": [
+    2,
+    "Explicitly allows that AI may not be unusual; no single cause asserted."
+   ],
+   "C9": [
+    2,
+    "Tight and proportionate."
+   ],
+   "C10": [
+    2,
+    "No invented statistics; '95%+ reliability' is illustrative, not a claim about the market."
+   ]
+  },
+  "rank": [
+   "X",
+   "Z",
+   "Y"
+  ],
+  "why": "X and Z both question the unverified premise and offer counter-arguments, and Z scores slightly higher on stated confidence, but X's system map (provider-as-competitor loop, capital timing, retention masked by trials) is the deeper analysis a demanding expert would want. Y is a readable list but presents unsourced numbers as fact (30-50% gross margins vs 80%), has no counter-argument and states one summary cause as settled."
+ },
+ "H2": {
+  "X": {
+   "C1": [
+    2,
+    "Three assumptions challenged, e.g. online is cheaper because no rent: rent becomes ads, platform fees and shipping."
+   ],
+   "C2": [
+    2,
+    "Known / Inferred / Unknown block, and says reasoning is from business structure, not the shop's numbers."
+   ],
+   "C3": [
+    2,
+    "Options A online-only / B hybrid showroom / C keep the shop and fix the root cause, plus scenarios."
+   ],
+   "C4": [
+    2,
+    "Skeptic plus a Bull case and 'recommendation fails if beans already dominate revenue / lease ending / burnout'."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE ~60% that testing before closing beats closing now, and it says A vs B cannot be assessed."
+   ],
+   "C6": [
+    2,
+    "Explicit 'go 100% online when...' and 'this does not apply if...' conditions."
+   ],
+   "C7": [
+    2,
+    "3-6 month test: separate cup vs bean P&L, collect LINE contacts, measure repeat rate without ads."
+   ],
+   "C8": [
+    2,
+    "Recommends a test, explicitly conditional."
+   ],
+   "C9": [
+    1,
+    "Long template with filler ('Forecaster: see SCENARIOS'); UNKNOWNS repeated in two places."
+   ],
+   "C10": [
+    2,
+    "No facts invented about the shop; slowbar/single-origin appear only as conditional examples; platform fee 10-25% given as a typical range."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "ASSUMPTION challenges the either/or framing and offers middle paths."
+   ],
+   "C2": [
+    2,
+    "KNOWN / UNKNOWN stated: only that it sells in-store; sales, costs, online share, product type unknown."
+   ],
+   "C3": [
+    1,
+    "Middle paths are named in one line but not compared with the two main options."
+   ],
+   "C4": [
+    2,
+    "COUNTER: if rent eats the profit and regulars already reorder online, closing may be the only way to survive."
+   ],
+   "C5": [
+    1,
+    "Says confidence cannot be assessed and why; no lean stated."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS: online profit per order plus repeat buyers beating shop net profit for 3 consecutive months."
+   ],
+   "C7": [
+    2,
+    "Two specific questions (online % and profit per order after fees; why change) and a 3-month threshold."
+   ],
+   "C8": [
+    2,
+    "Explicitly does not decide for the user."
+   ],
+   "C9": [
+    2,
+    "Tight; every line carries a decision factor."
+   ],
+   "C10": [
+    2,
+    "Invents nothing; the 20-30% threshold is framed conditionally."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Separates cups from beans and calls online costs 'commonly underestimated', but assumptions are not named."
+   ],
+   "C2": [
+    1,
+    "Asks for numbers at the end; no explicit known/unknown split."
+   ],
+   "C3": [
+    2,
+    "Signals for and against plus four middle paths (downsize, studio, subscription/wholesale, 3-month test)."
+   ],
+   "C4": [
+    1,
+    "'Signals to go online' gives the other side, but there is no strongest case against its lean to keep the shop."
+   ],
+   "C5": [
+    0,
+    "Only 'most of the time'; no confidence statement."
+   ],
+   "C6": [
+    2,
+    "Clear signal lists for when to switch and when not to."
+   ],
+   "C7": [
+    2,
+    "3-month test with defined metrics: profit per work hour, CAC, repeat rate."
+   ],
+   "C8": [
+    2,
+    "Conditional summary; offers to compute break-even."
+   ],
+   "C9": [
+    2,
+    "Practical, little padding for its length."
+   ],
+   "C10": [
+    2,
+    "Treats shop details conditionally ('especially if...'); platform fee 10-20% given as a typical range, not a fact about the shop."
+   ]
+  },
+  "rank": [
+   "X",
+   "Z",
+   "Y"
+  ],
+  "why": "X is the most complete: it reframes the shop's role, separates known from inferred, gives three options with invalidation conditions, a 60% stated confidence and a concrete 3-6 month test, and it invents nothing about the shop. Z gives richer practical options than Y (subscription, wholesale, tasting room, test metrics) but states no confidence, while Y is honest and tight but thin on alternatives; no factual errors seen."
+ },
+ "H1": {
+  "X": {
+   "C1": [
+    1,
+    "Reframes what is being sold (an option on the market, not hours), but other assumptions are not made explicit."
+   ],
+   "C2": [
+    1,
+    "'Questions that decide it' implies the unknowns; there is no explicit known/unknown split."
+   ],
+   "C3": [
+    2,
+    "Take / negotiate / push back or decline, with conditions for each."
+   ],
+   "C4": [
+    1,
+    "Lists risks of accepting, but there is no strongest case against its own 'probably yes, if negotiated'."
+   ],
+   "C5": [
+    1,
+    "Only 'Probably yes'; no explicit confidence."
+   ],
+   "C6": [
+    2,
+    "Bottom line gives clear take vs decline conditions."
+   ],
+   "C7": [
+    2,
+    "Detailed negotiation list (narrow definition, no tail, 60-90 day notice, renewal decision by month 9) and a reserve target."
+   ],
+   "C8": [
+    2,
+    "Conditional bottom line; offers to draft a counter-offer."
+   ],
+   "C9": [
+    2,
+    "Dense and practical, no padding."
+   ],
+   "C10": [
+    2,
+    "Uses 40% concentration, month-12 cliff, 5-person capacity/hiring, exclusivity scope."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Three explicit assumptions, e.g. '12 months guaranteed = security' when the real guarantee is the notice period."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Inferred / Unknown, and asks whether the 40% is added or a share."
+   ],
+   "C3": [
+    2,
+    "Four options A-D with trade-offs."
+   ],
+   "C4": [
+    1,
+    "Skeptic and a cash-crisis exception that favours A, but no full strongest case against option B."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE ~60% in B, plus scenario weightings flagged as rough."
+   ],
+   "C6": [
+    2,
+    "'This recommendation is invalid if...' with three conditions."
+   ],
+   "C7": [
+    2,
+    "Six-point counter-proposal and keeping someone on new business from month 1."
+   ],
+   "C8": [
+    2,
+    "Structures the call; legal review suggested."
+   ],
+   "C9": [
+    1,
+    "Long; 'Forecaster: see scenarios' filler, unknowns repeated, scenario percentages add bulk without basis."
+   ],
+   "C10": [
+    2,
+    "Uses all of 40%, 12 months/month 13, exclusivity, 5 people."
+   ]
+  },
+  "Z": {
+   "C1": [
+    2,
+    "Three explicit assumptions challenged (40% is a gain, exclusivity cost, 12 months = security)."
+   ],
+   "C2": [
+    2,
+    "Known vs unknown-and-decisive listed explicitly."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C, each with its failure mode."
+   ],
+   "C4": [
+    2,
+    "COUNTER: a small agency with an uneven pipeline may be better off taking it even on bad terms; vertical specialisation can be a strategy."
+   ],
+   "C5": [
+    2,
+    "Moderate confidence that renegotiating beats accepting; whether to take it at all not yet assessable."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS toward yes/no with thresholds (industry under 10%, 6+ months cash)."
+   ],
+   "C7": [
+    2,
+    "Before replying, compute industry share of the last 24 months and the hours the retainer needs; revisit at month 6."
+   ],
+   "C8": [
+    2,
+    "Lean only; decision left to user."
+   ],
+   "C9": [
+    2,
+    "Tight given the depth."
+   ],
+   "C10": [
+    2,
+    "Uses 40%, 12 months/month 13 cliff, industry exclusivity, 5-person capacity and hiring."
+   ]
+  },
+  "rank": [
+   "Z",
+   "Y",
+   "X"
+  ],
+  "why": "Z has the most rigorous structure (explicit assumptions, a genuine counter-argument, thresholds for yes/no and two numbers to compute first) at moderate length, and it labels the 15-30% premium as a heuristic rather than market data. Y is equally thorough but padded and attaches invented-looking scenario probabilities (25/45/25/5%); X gives excellent negotiation tactics but states rules of thumb ('usually 15-30%', '25-30% danger line') as industry norms and has no counter-argument or confidence."
+ },
+ "P4": {
+  "X": {
+   "C1": [
+    1,
+    "Implicitly challenges that timing matters for long-term buyers; not stated as an assumption."
+   ],
+   "C2": [
+    1,
+    "Says it cannot see real-time prices; no known/unknown structure beyond that."
+   ],
+   "C3": [
+    2,
+    "DCA vs lump sum (30-50% now), bar vs jewellery vs app/fund/ETF, buy vs wait."
+   ],
+   "C4": [
+    1,
+    "Notes gold can fall hard and stagnate and pays no yield, but not as a case against its conditional 'buy'."
+   ],
+   "C5": [
+    1,
+    "Only 'nobody knows'; no confidence statement."
+   ],
+   "C6": [
+    2,
+    "Summary gives buy-if / wait-if conditions."
+   ],
+   "C7": [
+    2,
+    "Concrete method (DCA, 30-50% initial tranche), emergency fund check, -10-20% tolerance test."
+   ],
+   "C8": [
+    2,
+    "Conditional only; asks for goals."
+   ],
+   "C9": [
+    2,
+    "Proportionate."
+   ],
+   "C10": [
+    2,
+    "No price or level; explicitly says it does not see live prices; no unconditional call."
+   ]
+  },
+  "Y": {
+   "C1": [
+    1,
+    "Implicitly says timing matters less for long horizons; not framed as an assumption."
+   ],
+   "C2": [
+    1,
+    "States it has not looked at live prices; no other separation."
+   ],
+   "C3": [
+    2,
+    "DCA vs lump with trade-offs; several holding forms including TFEX futures."
+   ],
+   "C4": [
+    1,
+    "Trade-offs of DCA vs lump only; no counter to its DCA lean."
+   ],
+   "C5": [
+    1,
+    "Says nobody can know; no confidence."
+   ],
+   "C6": [
+    1,
+    "'Rule that holds whatever the price' is a condition, but no explicit invalidation."
+   ],
+   "C7": [
+    1,
+    "Self-test questions (-20%), but no concrete step beyond answering them."
+   ],
+   "C8": [
+    2,
+    "Explicitly refuses to call buy or sell."
+   ],
+   "C9": [
+    2,
+    "Tight."
+   ],
+   "C10": [
+    2,
+    "No price or levels; no buy/sell call; 96.5% bar purity is a correct standard fact."
+   ]
+  },
+  "Z": {
+   "C1": [
+    2,
+    "ASSUMPTION: that there is a 'right moment' to buy; for long holds allocation and discipline matter more."
+   ],
+   "C2": [
+    2,
+    "KNOWN / UNKNOWN stated explicitly."
+   ],
+   "C3": [
+    2,
+    "One-time vs DCA and four holding forms compared on costs."
+   ],
+   "C4": [
+    2,
+    "COUNTER: gold has no cash flow; buying after a sharp rise may mean years to break even."
+   ],
+   "C5": [
+    1,
+    "Says confidence cannot be assessed, with the reason."
+   ],
+   "C6": [
+    1,
+    "WHAT CHANGES THIS lists missing info rather than invalidation conditions."
+   ],
+   "C7": [
+    1,
+    "Self-test questions (2-3 years flat, when needed) only."
+   ],
+   "C8": [
+    2,
+    "Refuses buy/sell signals; conditional framing."
+   ],
+   "C9": [
+    2,
+    "Tight."
+   ],
+   "C10": [
+    2,
+    "Explicitly will not give prices, support/resistance or signals."
+   ]
+  },
+  "rank": [
+   "Z",
+   "X",
+   "Y"
+  ],
+  "why": "Z is the only one to name and challenge the timing assumption and make a real counter-argument (no cash flow, years to recover after a spike), while staying strictly free of prices and calls. X is the most practically useful for a Thai buyer (bar vs jewellery making charge, baht effect, spread, staged entry) but weaker on uncertainty; Y is similar to X but thinner. No factual errors seen."
+ },
+ "P3": {
+  "X": {
+   "C1": [
+    2,
+    "ASSUMPTION: that 'good' is one thing; a plan can raise revenue while hurting growth or trust."
+   ],
+   "C2": [
+    2,
+    "Known: a plan exists; unknown: everything else, listed."
+   ],
+   "C3": [
+    1,
+    "Different goals and segment testing are mentioned, but no options are compared; appropriate given no data."
+   ],
+   "C4": [
+    2,
+    "COUNTER: over-analysing is unwise when a reversible small-segment launch can teach more."
+   ],
+   "C5": [
+    2,
+    "Explicit 'not assessable yet' with the reason."
+   ],
+   "C6": [
+    1,
+    "WHAT CHANGES THIS lists data to share rather than conditions that would flip a verdict."
+   ],
+   "C7": [
+    2,
+    "Two questions to answer first, plus a test-on-a-segment suggestion."
+   ],
+   "C8": [
+    2,
+    "No verdict imposed."
+   ],
+   "C9": [
+    2,
+    "Tight."
+   ],
+   "C10": [
+    2,
+    "Says it has not seen the plan; invents nothing."
+   ]
+  },
+  "Y": {
+   "C1": [
+    1,
+    "Notes a plan is only good against a goal; no other assumptions surfaced."
+   ],
+   "C2": [
+    1,
+    "Says what it does not know; no explicit known/unknown structure."
+   ],
+   "C3": [
+    1,
+    "Test on new signups vs full rollout only."
+   ],
+   "C4": [
+    0,
+    "No counter-argument."
+   ],
+   "C5": [
+    2,
+    "Explicit 'Confidence: not assessable yet' and refuses to invent scenarios."
+   ],
+   "C6": [
+    0,
+    "No invalidation conditions."
+   ],
+   "C7": [
+    2,
+    "Test on new signups or one segment first; specifies what to send."
+   ],
+   "C8": [
+    2,
+    "No verdict imposed."
+   ],
+   "C9": [
+    2,
+    "Tight."
+   ],
+   "C10": [
+    2,
+    "Explicitly refuses to invent; asks for plans, counts and goal."
+   ]
+  },
+  "Z": {
+   "C1": [
+    0,
+    "No assumptions surfaced or challenged."
+   ],
+   "C2": [
+    1,
+    "States nothing was shared; no further separation."
+   ],
+   "C3": [
+    1,
+    "Mentions launch / change / drop only as future outcomes."
+   ],
+   "C4": [
+    0,
+    "No counter-argument."
+   ],
+   "C5": [
+    1,
+    "'Can't judge yet' only."
+   ],
+   "C6": [
+    1,
+    "Break-even question ('if that number is small, the plan is fragile') is a partial invalidation test."
+   ],
+   "C7": [
+    2,
+    "Eight-point checklist and a list of what to send."
+   ],
+   "C8": [
+    1,
+    "Promises a 'straight verdict' once it has data, rather than a structured decision."
+   ],
+   "C9": [
+    1,
+    "Eight-item checklist is longer than needed for an empty question."
+   ],
+   "C10": [
+    1,
+    "Does not invent the plan, but assumes a physical-goods business ('product, shipping, platform fees') without basis."
+   ]
+  },
+  "rank": [
+   "X",
+   "Y",
+   "Z"
+  ],
+  "why": "X is honest about the missing plan and still adds value: it challenges the idea that 'good' is one thing, makes a real counter-argument for testing over analysis, and says what to check in 90 days. Y is equally honest but has no counter or invalidation, and Z's otherwise useful checklist assumes a shipping/platform-fee business the user never mentioned and promises a straight verdict."
+ },
+ "P2": {
+  "X": {
+   "C1": [
+    2,
+    "Three assumptions challenged, incl. 'we have 14 months' when only about 8 are usable before fundraising."
+   ],
+   "C2": [
+    2,
+    "Known / Inferred / Unknown laid out, unknowns named as decisive."
+   ],
+   "C3": [
+    2,
+    "Options A full Vietnam / B Thailand / C hybrid probe, with scenarios."
+   ],
+   "C4": [
+    2,
+    "Skeptic plus explicit invalidation conditions that favour Vietnam (stalled market, near-profitability, competitor)."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE ~60% in default, with basis stated."
+   ],
+   "C6": [
+    2,
+    "Four switch-to-A gates and three invalidating conditions."
+   ],
+   "C7": [
+    2,
+    "Four 2-week actions: recompute fundraising-start month, define 3 metrics, cost Vietnam, ask investors."
+   ],
+   "C8": [
+    2,
+    "'Your team makes the call.'"
+   ],
+   "C9": [
+    1,
+    "Long; Forecaster/Executor filler, and option odds (25-35%, 55-65%) add length on thin basis."
+   ],
+   "C10": [
+    2,
+    "Converts 14 months into about 6-8 usable months and reasons from it throughout."
+   ]
+  },
+  "Y": {
+   "C1": [
+    1,
+    "Challenges '14 months to experiment' and Thailand strength implicitly; not named as assumptions."
+   ],
+   "C2": [
+    1,
+    "Gives questions to answer; no explicit known/unknown split."
+   ],
+   "C3": [
+    2,
+    "Thailand / Vietnam / test-cheaply-commit-later compared."
+   ],
+   "C4": [
+    2,
+    "Section 5 makes the case for expanding now (funded partner, first-mover window, investor demand, saturation)."
+   ],
+   "C5": [
+    0,
+    "No confidence statement; asserts doubling down 'almost always wins'."
+   ],
+   "C6": [
+    2,
+    "Section 5 conditions for when the default flips."
+   ],
+   "C7": [
+    2,
+    "Test plan with go/no-go criteria and five team questions."
+   ],
+   "C8": [
+    2,
+    "Default stated conditionally; team decides."
+   ],
+   "C9": [
+    2,
+    "Long but substantive, little repetition."
+   ],
+   "C10": [
+    2,
+    "Works through the 14 months: 4-6 month raise leaves about 8 months; Vietnam signal takes 6-12 months."
+   ]
+  },
+  "Z": {
+   "C1": [
+    2,
+    "Three assumptions challenged, incl. 'this is a market choice' when it is a runway question."
+   ],
+   "C2": [
+    2,
+    "Explicit KNOWN / UNKNOWN."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C with trade-offs and failure modes."
+   ],
+   "C4": [
+    2,
+    "COUNTER: Vietnam could be the bigger prize and a two-country story could raise more."
+   ],
+   "C5": [
+    2,
+    "Moderate on the framework, says which market is better cannot be assessed; refuses to give odds."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS with thresholds (runway over about 20 months, entry cost over 25% of cash)."
+   ],
+   "C7": [
+    2,
+    "Build a 14-month cash model per option marking the fundraise month; revisit at month 4."
+   ],
+   "C8": [
+    2,
+    "Conditional lean."
+   ],
+   "C9": [
+    2,
+    "Tight for the depth."
+   ],
+   "C10": [
+    2,
+    "Uses 14 months throughout (8-10 month real window, runway extension past 20 months)."
+   ]
+  },
+  "rank": [
+   "Z",
+   "X",
+   "Y"
+  ],
+  "why": "Z reaches the same runway-driven framework as X with explicit counter, calibrated confidence and quantified switch conditions, in less space and without unsupported odds. X is comparably rigorous but longer and attaches judgment-based probabilities (25-35% vs 55-65%); Y is practical and correct (Vietnam ~100M people) but overstates 'doubling down almost always wins' and gives no confidence. Z's '9-10 months' versus '8-10' window is a minor internal inconsistency."
+ },
+ "P1": {
+  "X": {
+   "C1": [
+    2,
+    "Three assumptions challenged, notably that 6 months of living costs is the business runway."
+   ],
+   "C2": [
+    2,
+    "Known (stable job, 6 months savings) vs unknown (sales, capex, family, way back into a job)."
+   ],
+   "C3": [
+    2,
+    "Options A quit now / B parallel with thresholds / C negotiate reduced hours."
+   ],
+   "C4": [
+    2,
+    "COUNTER: existing wholesale demand or a time-limited opportunity makes waiting costlier."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE: moderate, with reasoning."
+   ],
+   "C6": [
+    2,
+    "WHAT CHANGES THIS both directions (quit now / don't even start in parallel)."
+   ],
+   "C7": [
+    2,
+    "Separate business account, 12-month cash-flow sheet, numeric quit criteria, review every 3 months."
+   ],
+   "C8": [
+    2,
+    "Leads with 'not yet' but conditional; 'final decision is yours'."
+   ],
+   "C9": [
+    2,
+    "Tight for the depth."
+   ],
+   "C10": [
+    2,
+    "Uses 6 months directly: runway formula, could really be 2-4 months once business costs are included."
+   ]
+  },
+  "Y": {
+   "C1": [
+    2,
+    "Three assumptions challenged, incl. '6 months savings = 6 months to experiment'."
+   ],
+   "C2": [
+    2,
+    "Explicit Known / Unknown lists."
+   ],
+   "C3": [
+    2,
+    "Options A/B/C plus four scenarios."
+   ],
+   "C4": [
+    2,
+    "Invalidation list gives the case for quitting sooner; Strategist/Skeptic disagree."
+   ],
+   "C5": [
+    2,
+    "CONFIDENCE ~65% with its basis."
+   ],
+   "C6": [
+    2,
+    "Explicit conditions that make the recommendation wrong."
+   ],
+   "C7": [
+    2,
+    "Four measurable quit criteria plus a fallback plan."
+   ],
+   "C8": [
+    2,
+    "'The final decision is yours.'"
+   ],
+   "C9": [
+    1,
+    "Long; system map and scenarios largely repeat points made in options and recommendation."
+   ],
+   "C10": [
+    2,
+    "Runway = (savings - business capital) / monthly costs; 6 months could be 2-3 in practice."
+   ]
+  },
+  "Z": {
+   "C1": [
+    1,
+    "Shows that the 6 months has to cover both living and business costs, but does not name or challenge other assumptions."
+   ],
+   "C2": [
+    1,
+    "Questions at the end imply unknowns; no explicit separation."
+   ],
+   "C3": [
+    1,
+    "One phased path (prove, set criteria, plan retreat); no alternative compared."
+   ],
+   "C4": [
+    0,
+    "No case for quitting now."
+   ],
+   "C5": [
+    0,
+    "No confidence statement."
+   ],
+   "C6": [
+    2,
+    "A pre-set 'life check date' 9 months after quitting and quit criteria serve as course-change conditions."
+   ],
+   "C7": [
+    2,
+    "Concrete steps: toll roasting, 2-3 wholesale cafes, track cost/kg including 15-20% roast loss."
+   ],
+   "C8": [
+    2,
+    "'Not yet' is conditional on the 6 months being the only cushion; offers to compute."
+   ],
+   "C9": [
+    2,
+    "Clear and proportionate."
+   ],
+   "C10": [
+    2,
+    "Centres the argument on why 6 months is short (3-4 real months once capex is included)."
+   ]
+  },
+  "rank": [
+   "X",
+   "Y",
+   "Z"
+  ],
+  "why": "X and Y reach the same well-grounded conclusion (test in parallel with numeric quit criteria, because 6 months of living costs is not business runway), but X does it with less repetition and a two-way 'what changes this'. Z is practical (toll roasting, roast loss) but has one path, no counter-argument and no confidence, and it states '12-24 months to break even for most roasteries' as fact without a source."
+ }
+}

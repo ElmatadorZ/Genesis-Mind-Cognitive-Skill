@@ -1,6 +1,6 @@
 ---
 name: "genesis-mind-strategic-intelligence"
-version: "5D.1"
+version: "5E"
 author: "ElmatadorZ"
 description: |
   Use this skill for strategic decisions, business analysis, thesis building,
@@ -172,49 +172,70 @@ The skill degrades honestly rather than fabricate:
 An abstention with its reason is a valid output. A confident conclusion built on
 facts the skill does not have is not.
 
+### The Epistemic Core — five moves, at every length
+
+The value of this skill is five moves, not its section headings. Every answer
+makes all five, whether it is 150 words or 1,500:
+
+1. **Assumption** — name the assumption the question rests on, and challenge it.
+2. **Known / Unknown** — say what is given, what is inferred, and what is missing.
+3. **Counter** — the strongest case against your own lean, in its best form.
+4. **Confidence** — a level grounded in the stated inputs, or "not assessable yet"
+   with the reason. Never a number the inputs cannot support.
+5. **What changes this** — the specific facts or events that would flip the answer.
+
+A short answer keeps all five as one line each. Cutting length never cuts a move.
+
 ### Proportion — size the answer to the information given
 
-The full OUTPUT STRUCTURE below is for questions that carry enough facts to fill it.
-A question carries enough when it names the options **or** at least one hard
+A question carries enough facts when it names the options **or** at least one hard
 constraint (a runway, savings, a deadline, a budget, a number). Then use the full
-structure, built on those facts. The short form below is only for a question that
-gives no specifics at all ("is our plan good?" with no plan):
+structure below, built on those facts. A question that gives no specifics at all
+("is our plan good?" with no plan) gets the short form:
 
-- Answer in **under ~250 words**: the 3–5 facts that would decide it, one or two
-  questions to ask first, and at most one general principle that holds either way.
+- **Under ~300 words**: the 3–5 facts that would decide it, one or two questions to
+  ask first, then the Epistemic Core as five one-line moves.
 - **No scenarios, agent council or system map** built on invented specifics.
   Generic scenarios are filler, not analysis.
-- **No confidence percentage** unless it is grounded in stated inputs; say
-  "not assessable yet" instead.
 
 Measured: on such a prompt the full structure ran ~1,000 words and scored 0/2 on
-concision in a blind evaluation; the short honest answer scored higher overall.
+concision; the short form that dropped the five moves lost 9 points across two
+prompts on assumptions, unknowns, counter-argument, confidence and invalidation.
+Short and complete beats both.
+
+### No section restates another
+
+Each section must add something no earlier section said. If the system map, the
+agent council or a scenario would repeat what is already on the page, merge it into
+the section it repeats or drop it. Keep a full answer near **600 words** unless the
+user asks for depth. Measured: the full answers lost their concision point because
+the system map and agent views restated earlier sections.
 
 ---
 
-## OUTPUT STRUCTURE — Default (when the question carries enough facts)
-📍 SITUATION ANALYSIS
-[What is actually happening — stripped of assumptions]
+## OUTPUT STRUCTURE — Full (when the question carries enough facts)
+📍 SITUATION
+[What is actually happening, stripped of assumptions — the given facts only]
 📍 FIRST PRINCIPLE BREAKDOWN
-[3 assumptions → challenge → truth]
-📍 SYSTEM MAP
+[The assumptions → challenge → what is actually true]
+📍 SYSTEM MAP *(only if it adds a loop or leverage point not yet named)*
 [Variables, cause-effect, feedback loops, leverage points]
-📍 MULTI-AGENT INSIGHT
-Analyst: [...]
-Strategist: [...]
-Skeptic: [...]
-Forecaster: [...]
-📍 SCENARIOS
-🐂 Bull: [condition + outcome]
-🐻 Bear: [condition + outcome]
-⚖️ Base: [most likely]
-💀 Black Swan: [low probability, high impact]
-📍 DECISION OPTIONS
-Option A: [trade-off, risk]
-Option B: [trade-off, risk]
-📍 FINAL RECOMMENDATION
-[Explicit recommendation + conditions that invalidate it]
-CONFIDENCE: [X%] | UNKNOWNS: [list] | WHAT CHANGES THIS: [list]
+📍 COUNCIL *(only the voices that disagree with each other)*
+Strategist / Skeptic / Analyst / Forecaster: [...]
+📍 OPTIONS AND SCENARIOS
+Option A / Option B: [trade-off, what breaks it, rough odds only if grounded]
+📍 RECOMMENDATION
+[Explicit recommendation, the first concrete step, and when to revisit]
+📍 EPISTEMIC CORE
+ASSUMPTION: [...] | KNOWN / UNKNOWN: [...] | COUNTER: [...]
+CONFIDENCE: [level or "not assessable" + why] | WHAT CHANGES THIS: [...]
+---
+
+## OUTPUT STRUCTURE — Short (when the question gives no specifics)
+[The 3–5 facts that decide it]
+[One or two questions to ask first]
+ASSUMPTION: [...] | KNOWN / UNKNOWN: [...] | COUNTER: [...]
+CONFIDENCE: [not assessable yet — because ...] | WHAT CHANGES THIS: [...]
 ---
 
 ## REFERENCE FILES — Load when needed
