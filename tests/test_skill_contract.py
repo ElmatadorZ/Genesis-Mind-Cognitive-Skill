@@ -63,3 +63,47 @@ def test_body_defers_markets_to_money_atlas():
     _, body = _split()
     # Scope boundary: this is not a markets skill and says so, by name.
     assert "money-atlas-intelligence-os" in body
+
+
+def test_description_does_not_claim_every_query():
+    """'ALWAYS use' / 'do not skip' wording makes a skill fight its neighbours for
+    every prompt; measured across the Genesis skills it produced 11 competing
+    claims. The description says when to use the skill, not that it always wins."""
+    fm, _ = _split()
+    desc = fm["description"]
+    assert not re.search(r"\balways\s+(use|trigger)\b", desc, re.I)
+    assert not re.search(r"do\s+not\s+skip", desc, re.I)
+
+
+def test_engines_are_stdlib_only():
+    """metadata.compatibility promises stdlib-only engines. Hold the code to it:
+    no third-party import outside tests/ and tools/ (those may use pytest/pyyaml)."""
+    import ast
+    import sys
+
+    std = set(getattr(sys, "stdlib_module_names", ()))  # Python 3.10+
+    if not std:  # Python 3.9: list the standard library directory instead
+        import pkgutil
+        import sysconfig
+
+        stdlib = sysconfig.get_paths()["stdlib"]
+        std = {m.name for m in pkgutil.iter_modules([stdlib])} | set(sys.builtin_module_names)
+        std |= {"__future__", "typing", "dataclasses", "itertools", "math"}
+    local = {p.stem for p in ROOT.rglob("*.py")} | {p.name for p in ROOT.iterdir() if p.is_dir()}
+    found = []
+    for f in ROOT.rglob("*.py"):
+        rel = f.relative_to(ROOT).parts
+        if rel[0] in {"tests", "tools", ".git"}:
+            continue
+        for node in ast.walk(ast.parse(f.read_text(encoding="utf-8"))):
+            if isinstance(node, ast.Import):
+                names = [a.name for a in node.names]
+            elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+                names = [node.module]
+            else:
+                continue
+            for n in names:
+                root = n.split(".")[0]
+                if root not in std and root not in local:
+                    found.append(f"{'/'.join(rel)}: {root}")
+    assert not found, "third-party imports break the stdlib-only promise: " + ", ".join(found)
